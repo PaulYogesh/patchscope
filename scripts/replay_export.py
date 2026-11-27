@@ -109,6 +109,35 @@ def replay(repo, episode, original):
     }
 
 
+def verify_expected_replay(expected, result):
+    """Check a replay against the values recorded with a portable episode."""
+    if not isinstance(expected, dict):
+        raise ValueError("--verify-expected requires an expected_replay object in the episode")
+    for field in (
+        "original_patch_sha256",
+        "legacy_renderer_reproduces_original_bytes",
+        "corrected_patch_sha256",
+        "corrected_tree",
+        "new_model_calls",
+    ):
+        recorded = expected.get(field)
+        actual = result[field]
+        if type(recorded) is not type(actual) or recorded != actual:
+            raise ValueError(f"Expected replay result differs for {field}")
+
+    field = "original_git_rejection_contains"
+    if field not in expected:
+        raise ValueError(f"Expected replay result is missing {field}")
+    recorded_error = expected[field]
+    actual_error = result["original_git_rejection"]
+    if recorded_error is None:
+        if actual_error is not None:
+            raise ValueError("The original patch was unexpectedly rejected by Git")
+    elif (not isinstance(recorded_error, str) or not recorded_error.strip()
+          or recorded_error.casefold() not in (actual_error or "").casefold()):
+        raise ValueError(f"Expected replay result differs for {field}")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--repo", type=Path, required=True)
@@ -116,6 +145,8 @@ def main():
     parser.add_argument("--original-diff", type=Path, help="Defaults to the episode's saved diff")
     parser.add_argument("--grader-dir", type=Path, help="Directory with report.json and patch.diff")
     parser.add_argument("--write-patch", type=Path, help="Write the corrected patch to a new file")
+    parser.add_argument("--verify-expected", action="store_true",
+                        help="Check the replay against the episode's expected_replay object")
     args = parser.parse_args()
     try:
         episode = read_json(args.episode)
@@ -127,6 +158,9 @@ def main():
                 raise ValueError("The episode has no saved diff. Supply --original-diff.")
             original = saved_diff.encode("utf-8")
         corrected, report = replay(args.repo, episode, original)
+        if args.verify_expected:
+            verify_expected_replay(episode.get("expected_replay"), report)
+            report["expected_replay_verified"] = True
         report["archived_grade"] = (
             archived_grade(args.grader_dir, episode["task_id"], corrected)
             if args.grader_dir else None

@@ -3,6 +3,10 @@ Copyright 2026 Yogesh Paul
 
 Original repository: https://github.com/PaulYogesh/patchscope
 
+The SQLFluff #2419 replay fixture includes excerpts from SQLFluff at commit
+f1dba0e1dd764ae72d67c3d5e1471cf14d3db030. The upstream MIT license and
+copyright notice are in fixtures/export_replay/sqlfluff-2419/LICENSE.upstream.md.
+
 “Commons Clause” License Condition v1.0
 
 The Software is provided to you by the Licensor under the License, as defined
