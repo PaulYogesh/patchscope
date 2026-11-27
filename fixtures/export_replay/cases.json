@@ -1,0 +1,12 @@
+[
+  {
+    "label": "Correct edit",
+    "replacement": "    return (x + y) / 2",
+    "expected_pass": true
+  },
+  {
+    "label": "Incomplete edit",
+    "replacement": "    return (x + y) // 2",
+    "expected_pass": false
+  }
+]

@@ -1,0 +1,124 @@
+{
+  "n_tasks": 4,
+  "n_matched": 4,
+  "results": [
+    {
+      "task_id": "mini-average-001",
+      "source_snapshot_sha256": "e295b553bc758363c7c411ba5dda08cc3190c0638c79cae4b7e30f337c6f397d",
+      "paths_observed": [
+        "average_utils.py",
+        "statistics.py"
+      ],
+      "static_import_edges": 0,
+      "verified": {
+        "off": false,
+        "inventory": false,
+        "imports": false
+      },
+      "status": {
+        "off": "repair_failed_tests",
+        "inventory": "repair_failed_tests",
+        "imports": "repair_failed_tests"
+      },
+      "patch": {
+        "off": "average_utils.py",
+        "inventory": "average_utils.py",
+        "imports": "average_utils.py"
+      },
+      "proposal_tokens": {
+        "off": 535,
+        "inventory": 626,
+        "imports": 724
+      }
+    },
+    {
+      "task_id": "mini-clamp-002",
+      "source_snapshot_sha256": "c512c9393ae9c81de3f44bcb2582c7b751ab920e5516e04b91a6db02ad57f4af",
+      "paths_observed": [
+        "bounds_compat.py",
+        "discounts.py",
+        "formatting.py",
+        "limits.py",
+        "window.py"
+      ],
+      "static_import_edges": 0,
+      "verified": {
+        "off": false,
+        "inventory": false,
+        "imports": false
+      },
+      "status": {
+        "off": "repair_failed_tests",
+        "inventory": "repair_failed_tests",
+        "imports": "repair_failed_tests"
+      },
+      "patch": {
+        "off": "bounds_compat.py",
+        "inventory": "bounds_compat.py",
+        "imports": "bounds_compat.py"
+      },
+      "proposal_tokens": {
+        "off": 1040,
+        "inventory": 1186,
+        "imports": 1070
+      }
+    },
+    {
+      "task_id": "mini-discount-004",
+      "source_snapshot_sha256": "55bee82eaa789c2299e73f6310200118f425d69d65e6c31611d7e467c3194cfc",
+      "paths_observed": [
+        "checkout.py"
+      ],
+      "static_import_edges": 0,
+      "verified": {
+        "off": true,
+        "inventory": true,
+        "imports": true
+      },
+      "status": {
+        "off": "resolved",
+        "inventory": "resolved",
+        "imports": "resolved"
+      },
+      "patch": {
+        "off": "checkout.py",
+        "inventory": "checkout.py",
+        "imports": "checkout.py"
+      },
+      "proposal_tokens": {
+        "off": 493,
+        "inventory": 725,
+        "imports": 739
+      }
+    },
+    {
+      "task_id": "mini-slug-003",
+      "source_snapshot_sha256": "207d119f57a8496e392ade8d4ef00215eb92e62f85dae513a7e225b010df2a40",
+      "paths_observed": [
+        "slugify.py",
+        "text_ops.py"
+      ],
+      "static_import_edges": 0,
+      "verified": {
+        "off": false,
+        "inventory": false,
+        "imports": false
+      },
+      "status": {
+        "off": "repair_failed_tests",
+        "inventory": "repair_failed_tests",
+        "imports": "error"
+      },
+      "patch": {
+        "off": "slugify.py",
+        "inventory": "slugify.py",
+        "imports": null
+      },
+      "proposal_tokens": {
+        "off": 942,
+        "inventory": 1320,
+        "imports": 3551
+      }
+    }
+  ]
+}

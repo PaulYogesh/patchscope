@@ -1,0 +1,1 @@
+Our application quotes tax-inclusive totals with too few decimal places. In the public `service.quote_total(10.25, 0.1)` flow, the expected value is 11.28 but the application returns 11.0. Please repair the operative implementation without changing unrelated compatibility behavior.

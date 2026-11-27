@@ -1,0 +1,222 @@
+{
+  "experiment_id": "smoke-v02",
+  "total_runs": 8,
+  "conditions": {
+    "bm25": {
+      "runs": 2,
+      "seeded_oracle": 2,
+      "oracle_observed": 2,
+      "off_target_reads": 6,
+      "repeated_reads": 0,
+      "read_expansions": 0,
+      "verified_repairs": 2
+    },
+    "native": {
+      "runs": 2,
+      "seeded_oracle": 0,
+      "oracle_observed": 2,
+      "off_target_reads": 6,
+      "repeated_reads": 0,
+      "read_expansions": 0,
+      "verified_repairs": 2
+    },
+    "oracle": {
+      "runs": 2,
+      "seeded_oracle": 2,
+      "oracle_observed": 2,
+      "off_target_reads": 6,
+      "repeated_reads": 0,
+      "read_expansions": 0,
+      "verified_repairs": 2
+    },
+    "placebo": {
+      "runs": 2,
+      "seeded_oracle": 0,
+      "oracle_observed": 2,
+      "off_target_reads": 4,
+      "repeated_reads": 2,
+      "read_expansions": 0,
+      "verified_repairs": 2
+    }
+  },
+  "identical_repeat_groups": [
+    {
+      "task_id": "mini-average-001",
+      "condition": "bm25",
+      "repetitions": 2
+    },
+    {
+      "task_id": "mini-average-001",
+      "condition": "native",
+      "repetitions": 2
+    },
+    {
+      "task_id": "mini-average-001",
+      "condition": "oracle",
+      "repetitions": 2
+    },
+    {
+      "task_id": "mini-average-001",
+      "condition": "placebo",
+      "repetitions": 2
+    }
+  ],
+  "runs": [
+    {
+      "run_id": "mini-average-001__bm25__r00",
+      "task_id": "mini-average-001",
+      "condition": "bm25",
+      "repetition": 0,
+      "seeded_oracle": true,
+      "seeded_paths": [
+        "calculator.py"
+      ],
+      "first_read_path": "billing.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 0,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "0b7c97088aaa683e90c66ef547fbbc2eefe89131b824a8ed851cfb8fc5718a19"
+    },
+    {
+      "run_id": "mini-average-001__bm25__r01",
+      "task_id": "mini-average-001",
+      "condition": "bm25",
+      "repetition": 1,
+      "seeded_oracle": true,
+      "seeded_paths": [
+        "calculator.py"
+      ],
+      "first_read_path": "billing.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 0,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "0b7c97088aaa683e90c66ef547fbbc2eefe89131b824a8ed851cfb8fc5718a19"
+    },
+    {
+      "run_id": "mini-average-001__native__r00",
+      "task_id": "mini-average-001",
+      "condition": "native",
+      "repetition": 0,
+      "seeded_oracle": false,
+      "seeded_paths": [],
+      "first_read_path": "billing.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "302ed21dd5e3b72c68061d76ab4f749798247da5e0ac2bb5288e939494b09229"
+    },
+    {
+      "run_id": "mini-average-001__native__r01",
+      "task_id": "mini-average-001",
+      "condition": "native",
+      "repetition": 1,
+      "seeded_oracle": false,
+      "seeded_paths": [],
+      "first_read_path": "billing.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "302ed21dd5e3b72c68061d76ab4f749798247da5e0ac2bb5288e939494b09229"
+    },
+    {
+      "run_id": "mini-average-001__oracle__r00",
+      "task_id": "mini-average-001",
+      "condition": "oracle",
+      "repetition": 0,
+      "seeded_oracle": true,
+      "seeded_paths": [
+        "calculator.py"
+      ],
+      "first_read_path": "billing.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 0,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "0b7c97088aaa683e90c66ef547fbbc2eefe89131b824a8ed851cfb8fc5718a19"
+    },
+    {
+      "run_id": "mini-average-001__oracle__r01",
+      "task_id": "mini-average-001",
+      "condition": "oracle",
+      "repetition": 1,
+      "seeded_oracle": true,
+      "seeded_paths": [
+        "calculator.py"
+      ],
+      "first_read_path": "billing.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 0,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "0b7c97088aaa683e90c66ef547fbbc2eefe89131b824a8ed851cfb8fc5718a19"
+    },
+    {
+      "run_id": "mini-average-001__placebo__r00",
+      "task_id": "mini-average-001",
+      "condition": "placebo",
+      "repetition": 0,
+      "seeded_oracle": false,
+      "seeded_paths": [
+        "billing.py"
+      ],
+      "first_read_path": "statistics.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 2,
+      "repeat_reads": 1,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "d45ef3514b6ef308dd0a085f015a5cd5ed92ca026b2362b789d7f97abefec48f"
+    },
+    {
+      "run_id": "mini-average-001__placebo__r01",
+      "task_id": "mini-average-001",
+      "condition": "placebo",
+      "repetition": 1,
+      "seeded_oracle": false,
+      "seeded_paths": [
+        "billing.py"
+      ],
+      "first_read_path": "statistics.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 2,
+      "repeat_reads": 1,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "d45ef3514b6ef308dd0a085f015a5cd5ed92ca026b2362b789d7f97abefec48f"
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "experiment_id": "evidence-imports-v050",
+  "description": "Patch-only evidence imports intervention on four DEVELOPMENT decoy tasks; native runs selected via CLI. Not held out.",
+  "conditions": [
+    "native",
+    "bm25",
+    "placebo",
+    "oracle",
+    "misleading"
+  ],
+  "repetitions": 1,
+  "randomization_seed": 20261023,
+  "model_seed_base": 42000,
+  "model": {
+    "primary": "qwen3.5:9b",
+    "temperature": 0,
+    "require_native_tools": true
+  },
+  "budgets": {
+    "max_steps": 6,
+    "max_tool_calls": 8,
+    "max_model_calls": 10,
+    "max_completion_tokens_per_call": 450,
+    "soft_total_token_budget": 8000,
+    "seed_char_budget": 1600,
+    "max_patch_retries": 1,
+    "max_patch_completion_tokens_per_call": 1400,
+    "source_map_char_budget": 1400
+  },
+  "retrieval": {
+    "top_k": 1
+  },
+  "tasks": [
+    {
+      "task_id": "mini-average-001",
+      "repo_path": "fixtures/interference_mini_repo",
+      "issue_path": "fixtures/interference_mini_repo/issue.md",
+      "trusted_execution": true,
+      "verification": {
+        "kind": "pytest",
+        "timeout_seconds": 30
+      },
+      "oracle": {
+        "paths": [
+          "calculator.py"
+        ]
+      },
+      "placebo_pool": [
+        "billing.py",
+        "formatting.py",
+        "statistics.py"
+      ],
+      "misleading_pool": [
+        "average_utils.py"
+      ]
+    },
+    {
+      "task_id": "mini-clamp-002",
+      "repo_path": "fixtures/interference_clamp_repo",
+      "issue_path": "fixtures/interference_clamp_repo/issue.md",
+      "trusted_execution": true,
+      "verification": {
+        "kind": "pytest",
+        "timeout_seconds": 30
+      },
+      "oracle": {
+        "paths": [
+          "limits.py"
+        ]
+      },
+      "placebo_pool": [
+        "discounts.py",
+        "window.py",
+        "formatting.py"
+      ],
+      "misleading_pool": [
+        "bounds_compat.py"
+      ]
+    },
+    {
+      "task_id": "mini-slug-003",
+      "repo_path": "fixtures/interference_slug_repo",
+      "issue_path": "fixtures/interference_slug_repo/issue.md",
+      "trusted_execution": true,
+      "verification": {
+        "kind": "pytest",
+        "timeout_seconds": 30
+      },
+      "oracle": {
+        "paths": [
+          "text_ops.py"
+        ]
+      },
+      "placebo_pool": [
+        "capitalize.py",
+        "validators.py",
+        "message.py"
+      ],
+      "misleading_pool": [
+        "slugify.py"
+      ]
+    },
+    {
+      "task_id": "mini-discount-004",
+      "repo_path": "fixtures/interference_discount_repo",
+      "issue_path": "fixtures/interference_discount_repo/issue.md",
+      "trusted_execution": true,
+      "verification": {
+        "kind": "pytest",
+        "timeout_seconds": 30
+      },
+      "oracle": {
+        "paths": [
+          "checkout.py"
+        ]
+      },
+      "placebo_pool": [
+        "promotions.py",
+        "taxes.py",
+        "currency.py"
+      ],
+      "misleading_pool": [
+        "pricing_compat.py"
+      ]
+    }
+  ],
+  "evidence_policy": "imports"
+}

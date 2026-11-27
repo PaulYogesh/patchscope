@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use PatchScope in your research, please cite this software."
+title: "PatchScope"
+type: software
+authors:
+  - given-names: Yogesh
+    family-names: Paul
+repository-code: "https://github.com/PaulYogesh/patchscope"

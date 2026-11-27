@@ -1,0 +1,642 @@
+{
+  "original": {
+    "experiment_ids": {
+      "clean": "decoy-free-native-v031",
+      "neutral": "same-name-neutral-native-v032",
+      "decoy": "interference-smoke-v030"
+    },
+    "n_distinct_tasks": 4,
+    "rows": [
+      {
+        "task_id": "mini-average-001",
+        "repetition": 0,
+        "oracle_paths": [
+          "calculator.py"
+        ],
+        "extra_path": "average_utils.py",
+        "static_oracle_importers": [],
+        "static_extra_importers": [],
+        "clean_verified": true,
+        "neutral_verified": true,
+        "decoy_verified": false,
+        "decoy_extra_file_patch": true,
+        "exposures": {
+          "clean": {
+            "variant": "clean",
+            "first_read": "billing.py",
+            "extra_file_read": false,
+            "extra_file_observed": false,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 4,
+            "n_valid_reads": 4
+          },
+          "neutral": {
+            "variant": "neutral",
+            "first_read": "average_utils.py",
+            "extra_file_read": true,
+            "extra_file_observed": true,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 3,
+            "n_valid_reads": 3
+          },
+          "decoy": {
+            "variant": "decoy",
+            "first_read": "average_utils.py",
+            "extra_file_read": true,
+            "extra_file_observed": true,
+            "oracle_observed": false,
+            "oracle_tool_read": false,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 2,
+            "n_valid_reads": 2
+          }
+        }
+      },
+      {
+        "task_id": "mini-clamp-002",
+        "repetition": 0,
+        "oracle_paths": [
+          "limits.py"
+        ],
+        "extra_path": "bounds_compat.py",
+        "static_oracle_importers": [],
+        "static_extra_importers": [],
+        "clean_verified": true,
+        "neutral_verified": true,
+        "decoy_verified": false,
+        "decoy_extra_file_patch": true,
+        "exposures": {
+          "clean": {
+            "variant": "clean",
+            "first_read": "limits.py",
+            "extra_file_read": false,
+            "extra_file_observed": false,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 1,
+            "n_valid_reads": 1
+          },
+          "neutral": {
+            "variant": "neutral",
+            "first_read": "bounds_compat.py",
+            "extra_file_read": true,
+            "extra_file_observed": true,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 2,
+            "n_valid_reads": 2
+          },
+          "decoy": {
+            "variant": "decoy",
+            "first_read": "bounds_compat.py",
+            "extra_file_read": true,
+            "extra_file_observed": true,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 5,
+            "n_valid_reads": 5
+          }
+        }
+      },
+      {
+        "task_id": "mini-discount-004",
+        "repetition": 0,
+        "oracle_paths": [
+          "checkout.py"
+        ],
+        "extra_path": "pricing_compat.py",
+        "static_oracle_importers": [],
+        "static_extra_importers": [],
+        "clean_verified": true,
+        "neutral_verified": true,
+        "decoy_verified": true,
+        "decoy_extra_file_patch": false,
+        "exposures": {
+          "clean": {
+            "variant": "clean",
+            "first_read": "checkout.py",
+            "extra_file_read": false,
+            "extra_file_observed": false,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 4,
+            "n_valid_reads": 4
+          },
+          "neutral": {
+            "variant": "neutral",
+            "first_read": "checkout.py",
+            "extra_file_read": false,
+            "extra_file_observed": false,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 1,
+            "n_valid_reads": 1
+          },
+          "decoy": {
+            "variant": "decoy",
+            "first_read": "checkout.py",
+            "extra_file_read": false,
+            "extra_file_observed": false,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 1,
+            "n_valid_reads": 1
+          }
+        }
+      },
+      {
+        "task_id": "mini-slug-003",
+        "repetition": 0,
+        "oracle_paths": [
+          "text_ops.py"
+        ],
+        "extra_path": "slugify.py",
+        "static_oracle_importers": [],
+        "static_extra_importers": [],
+        "clean_verified": true,
+        "neutral_verified": true,
+        "decoy_verified": false,
+        "decoy_extra_file_patch": true,
+        "exposures": {
+          "clean": {
+            "variant": "clean",
+            "first_read": "capitalize.py",
+            "extra_file_read": false,
+            "extra_file_observed": false,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 4,
+            "n_valid_reads": 4
+          },
+          "neutral": {
+            "variant": "neutral",
+            "first_read": "slugify.py",
+            "extra_file_read": true,
+            "extra_file_observed": true,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 5,
+            "n_valid_reads": 5
+          },
+          "decoy": {
+            "variant": "decoy",
+            "first_read": "slugify.py",
+            "extra_file_read": true,
+            "extra_file_observed": true,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 2,
+            "n_valid_reads": 2
+          }
+        }
+      }
+    ],
+    "summary": {
+      "decoy_observed": 3,
+      "decoy_first_read": 3,
+      "decoy_wrong_locus_patches": 3,
+      "decoy_failures": 3,
+      "visible_oracle_importer_tasks": 0,
+      "visible_decoy_importer_tasks": 0
+    }
+  },
+  "expanded": {
+    "experiment_ids": {
+      "clean": "benchmark-clean-v040",
+      "neutral": "benchmark-neutral-v040",
+      "decoy": "benchmark-decoy-v040"
+    },
+    "n_distinct_tasks": 8,
+    "rows": [
+      {
+        "task_id": "backoff-ceiling-006",
+        "repetition": 0,
+        "oracle_paths": [
+          "backoff.py"
+        ],
+        "extra_path": "retry_compat.py",
+        "static_oracle_importers": [
+          "service.py"
+        ],
+        "static_extra_importers": [],
+        "clean_verified": true,
+        "neutral_verified": true,
+        "decoy_verified": true,
+        "decoy_extra_file_patch": false,
+        "exposures": {
+          "clean": {
+            "variant": "clean",
+            "first_read": "backoff.py",
+            "extra_file_read": false,
+            "extra_file_observed": false,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 1,
+            "n_valid_reads": 1
+          },
+          "neutral": {
+            "variant": "neutral",
+            "first_read": "backoff.py",
+            "extra_file_read": false,
+            "extra_file_observed": false,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 1,
+            "n_valid_reads": 1
+          },
+          "decoy": {
+            "variant": "decoy",
+            "first_read": "backoff.py",
+            "extra_file_read": false,
+            "extra_file_observed": false,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 1,
+            "n_valid_reads": 1
+          }
+        }
+      },
+      {
+        "task_id": "f1-harmonic-012",
+        "repetition": 0,
+        "oracle_paths": [
+          "scores.py"
+        ],
+        "extra_path": "scores_compat.py",
+        "static_oracle_importers": [
+          "service.py"
+        ],
+        "static_extra_importers": [],
+        "clean_verified": true,
+        "neutral_verified": true,
+        "decoy_verified": true,
+        "decoy_extra_file_patch": false,
+        "exposures": {
+          "clean": {
+            "variant": "clean",
+            "first_read": "scores.py",
+            "extra_file_read": false,
+            "extra_file_observed": false,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 1,
+            "n_valid_reads": 1
+          },
+          "neutral": {
+            "variant": "neutral",
+            "first_read": "scores.py",
+            "extra_file_read": false,
+            "extra_file_observed": false,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 1,
+            "n_valid_reads": 1
+          },
+          "decoy": {
+            "variant": "decoy",
+            "first_read": "scores.py",
+            "extra_file_read": false,
+            "extra_file_observed": false,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 1,
+            "n_valid_reads": 1
+          }
+        }
+      },
+      {
+        "task_id": "one-index-pages-008",
+        "repetition": 0,
+        "oracle_paths": [
+          "pagination.py"
+        ],
+        "extra_path": "pagination_compat.py",
+        "static_oracle_importers": [
+          "service.py"
+        ],
+        "static_extra_importers": [],
+        "clean_verified": true,
+        "neutral_verified": true,
+        "decoy_verified": true,
+        "decoy_extra_file_patch": false,
+        "exposures": {
+          "clean": {
+            "variant": "clean",
+            "first_read": "pagination.py",
+            "extra_file_read": false,
+            "extra_file_observed": false,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 4,
+            "n_valid_reads": 4
+          },
+          "neutral": {
+            "variant": "neutral",
+            "first_read": "pagination.py",
+            "extra_file_read": true,
+            "extra_file_observed": true,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 2,
+            "n_valid_reads": 2
+          },
+          "decoy": {
+            "variant": "decoy",
+            "first_read": "pagination.py",
+            "extra_file_read": true,
+            "extra_file_observed": true,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 5,
+            "n_valid_reads": 5
+          }
+        }
+      },
+      {
+        "task_id": "owner-access-009",
+        "repetition": 0,
+        "oracle_paths": [
+          "policy.py"
+        ],
+        "extra_path": "policy_compat.py",
+        "static_oracle_importers": [
+          "service.py"
+        ],
+        "static_extra_importers": [],
+        "clean_verified": true,
+        "neutral_verified": true,
+        "decoy_verified": true,
+        "decoy_extra_file_patch": false,
+        "exposures": {
+          "clean": {
+            "variant": "clean",
+            "first_read": "constants.py",
+            "extra_file_read": false,
+            "extra_file_observed": false,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 4,
+            "n_valid_reads": 4
+          },
+          "neutral": {
+            "variant": "neutral",
+            "first_read": "constants.py",
+            "extra_file_read": true,
+            "extra_file_observed": true,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 5,
+            "n_valid_reads": 5
+          },
+          "decoy": {
+            "variant": "decoy",
+            "first_read": "constants.py",
+            "extra_file_read": true,
+            "extra_file_observed": true,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 5,
+            "n_valid_reads": 5
+          }
+        }
+      },
+      {
+        "task_id": "sensor-offset-010",
+        "repetition": 0,
+        "oracle_paths": [
+          "calibration.py"
+        ],
+        "extra_path": "calibration_compat.py",
+        "static_oracle_importers": [
+          "service.py"
+        ],
+        "static_extra_importers": [],
+        "clean_verified": true,
+        "neutral_verified": true,
+        "decoy_verified": true,
+        "decoy_extra_file_patch": false,
+        "exposures": {
+          "clean": {
+            "variant": "clean",
+            "first_read": "calibration.py",
+            "extra_file_read": false,
+            "extra_file_observed": false,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 4,
+            "n_valid_reads": 4
+          },
+          "neutral": {
+            "variant": "neutral",
+            "first_read": "calibration.py",
+            "extra_file_read": false,
+            "extra_file_observed": false,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 1,
+            "n_valid_reads": 1
+          },
+          "decoy": {
+            "variant": "decoy",
+            "first_read": "calibration.py",
+            "extra_file_read": false,
+            "extra_file_observed": false,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 1,
+            "n_valid_reads": 1
+          }
+        }
+      },
+      {
+        "task_id": "stock-exact-007",
+        "repetition": 0,
+        "oracle_paths": [
+          "allocation.py"
+        ],
+        "extra_path": "stock_compat.py",
+        "static_oracle_importers": [
+          "service.py"
+        ],
+        "static_extra_importers": [],
+        "clean_verified": true,
+        "neutral_verified": true,
+        "decoy_verified": true,
+        "decoy_extra_file_patch": false,
+        "exposures": {
+          "clean": {
+            "variant": "clean",
+            "first_read": "allocation.py",
+            "extra_file_read": false,
+            "extra_file_observed": false,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 4,
+            "n_valid_reads": 4
+          },
+          "neutral": {
+            "variant": "neutral",
+            "first_read": "allocation.py",
+            "extra_file_read": false,
+            "extra_file_observed": false,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 2,
+            "n_valid_reads": 2
+          },
+          "decoy": {
+            "variant": "decoy",
+            "first_read": "allocation.py",
+            "extra_file_read": false,
+            "extra_file_observed": false,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 2,
+            "n_valid_reads": 2
+          }
+        }
+      },
+      {
+        "task_id": "tiered-billing-005",
+        "repetition": 0,
+        "oracle_paths": [
+          "tax_math.py"
+        ],
+        "extra_path": "tax_compat.py",
+        "static_oracle_importers": [
+          "service.py"
+        ],
+        "static_extra_importers": [],
+        "clean_verified": true,
+        "neutral_verified": true,
+        "decoy_verified": true,
+        "decoy_extra_file_patch": false,
+        "exposures": {
+          "clean": {
+            "variant": "clean",
+            "first_read": "constants.py",
+            "extra_file_read": false,
+            "extra_file_observed": false,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 4,
+            "n_valid_reads": 4
+          },
+          "neutral": {
+            "variant": "neutral",
+            "first_read": "tax_math.py",
+            "extra_file_read": true,
+            "extra_file_observed": true,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 5,
+            "n_valid_reads": 5
+          },
+          "decoy": {
+            "variant": "decoy",
+            "first_read": "tax_math.py",
+            "extra_file_read": true,
+            "extra_file_observed": true,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 5,
+            "n_valid_reads": 5
+          }
+        }
+      },
+      {
+        "task_id": "window-inclusive-011",
+        "repetition": 0,
+        "oracle_paths": [
+          "intervals.py"
+        ],
+        "extra_path": "window_compat.py",
+        "static_oracle_importers": [
+          "service.py"
+        ],
+        "static_extra_importers": [],
+        "clean_verified": true,
+        "neutral_verified": true,
+        "decoy_verified": true,
+        "decoy_extra_file_patch": false,
+        "exposures": {
+          "clean": {
+            "variant": "clean",
+            "first_read": "constants.py",
+            "extra_file_read": false,
+            "extra_file_observed": false,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 4,
+            "n_valid_reads": 4
+          },
+          "neutral": {
+            "variant": "neutral",
+            "first_read": "constants.py",
+            "extra_file_read": true,
+            "extra_file_observed": true,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 5,
+            "n_valid_reads": 5
+          },
+          "decoy": {
+            "variant": "decoy",
+            "first_read": "constants.py",
+            "extra_file_read": true,
+            "extra_file_observed": true,
+            "oracle_observed": true,
+            "oracle_tool_read": true,
+            "seeded_extra_file": false,
+            "n_unique_observed_files": 5,
+            "n_valid_reads": 5
+          }
+        }
+      }
+    ],
+    "summary": {
+      "decoy_observed": 4,
+      "decoy_first_read": 0,
+      "decoy_wrong_locus_patches": 0,
+      "decoy_failures": 0,
+      "visible_oracle_importer_tasks": 8,
+      "visible_decoy_importer_tasks": 0
+    }
+  }
+}

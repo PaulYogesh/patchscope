@@ -1,0 +1,44 @@
+{
+  "n_tasks": 2,
+  "n_matched": 2,
+  "rows": [
+    {
+      "task_id": "retry-dynamic-dispatch-014",
+      "repetition": 0,
+      "off_verified": true,
+      "trace_verified": false,
+      "off_status": "resolved",
+      "trace_status": "repair_failed_tests",
+      "off_patch": "backoff_core.py",
+      "trace_patch": "backoff_core.py",
+      "trace_executed_paths": [
+        "backoff_core.py",
+        "service.py",
+        "settings.py"
+      ],
+      "trace_patch_executed": true,
+      "identical_exploration": false,
+      "delta_tokens": 546
+    },
+    {
+      "task_id": "tax-dynamic-dispatch-013",
+      "repetition": 0,
+      "off_verified": true,
+      "trace_verified": true,
+      "off_status": "resolved",
+      "trace_status": "resolved",
+      "off_patch": "tax_core.py",
+      "trace_patch": "tax_core.py",
+      "trace_executed_paths": [
+        "config.py",
+        "service.py",
+        "tax_core.py"
+      ],
+      "trace_patch_executed": true,
+      "identical_exploration": false,
+      "delta_tokens": 9
+    }
+  ],
+  "off_verified": 2,
+  "trace_verified": 1
+}

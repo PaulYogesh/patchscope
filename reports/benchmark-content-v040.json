@@ -1,0 +1,369 @@
+{
+  "comparison": "native_clean_vs_same_name_neutral_vs_task_relevant_decoy",
+  "experiments": {
+    "clean": "benchmark-clean-v040",
+    "neutral": "benchmark-neutral-v040",
+    "decoy": "benchmark-decoy-v040"
+  },
+  "n_distinct_tasks": 8,
+  "n_matched_episodes": 8,
+  "fixture_parity": [
+    {
+      "task_id": "backoff-ceiling-006",
+      "extra_path": "retry_compat.py",
+      "neutral_bytes": 116,
+      "decoy_bytes": 116,
+      "neutral_minus_decoy_bytes": 0,
+      "neutral_sha256": "933f41d203c1e6c7dc73308b087b0a6e8096f06c1eab75eae320e373842a8ef8",
+      "decoy_sha256": "323fd2a03782c5db119d326a617e4bd157ac09f3bad72584cc05c059ecf7dcf4"
+    },
+    {
+      "task_id": "f1-harmonic-012",
+      "extra_path": "scores_compat.py",
+      "neutral_bytes": 95,
+      "decoy_bytes": 95,
+      "neutral_minus_decoy_bytes": 0,
+      "neutral_sha256": "6f5585e373d6e68164a223a93eee25253647dc3ed5db68b118a97f40bc09fbd6",
+      "decoy_sha256": "f6e229310451df08896f79c8a9dc7109b1aa419df26d725b621036a2dc598b36"
+    },
+    {
+      "task_id": "one-index-pages-008",
+      "extra_path": "pagination_compat.py",
+      "neutral_bytes": 74,
+      "decoy_bytes": 74,
+      "neutral_minus_decoy_bytes": 0,
+      "neutral_sha256": "9ae78d860d97ec4459a8148746ab5d15558d89c0359af134a39a15faae865166",
+      "decoy_sha256": "fe39a6c892e4afd610aca2203d7d9996fe03eabe731e90c0eb860875bc4dac44"
+    },
+    {
+      "task_id": "owner-access-009",
+      "extra_path": "policy_compat.py",
+      "neutral_bytes": 113,
+      "decoy_bytes": 113,
+      "neutral_minus_decoy_bytes": 0,
+      "neutral_sha256": "e0065f7ba001b11b86270ed3064ff040b8f23a5f657226a15e38f7d2b6d43449",
+      "decoy_sha256": "a57cb05eedeea9f33ee3cae208f5c06384b9900770472aaab070532fee8aa0f3"
+    },
+    {
+      "task_id": "sensor-offset-010",
+      "extra_path": "calibration_compat.py",
+      "neutral_bytes": 93,
+      "decoy_bytes": 93,
+      "neutral_minus_decoy_bytes": 0,
+      "neutral_sha256": "9ed72a57e02a9dfa030ebc26f04d341b95e795bd272330c263b6e373f5190e9d",
+      "decoy_sha256": "8399f50aa406ae06567818ef38b210c74de5c54e25dd7183ec95c11a0198d78e"
+    },
+    {
+      "task_id": "stock-exact-007",
+      "extra_path": "stock_compat.py",
+      "neutral_bytes": 94,
+      "decoy_bytes": 94,
+      "neutral_minus_decoy_bytes": 0,
+      "neutral_sha256": "b72378e67c9c5a08357e217530d68a9ac9d1c3283f504c7d5ea2ad5ac114baee",
+      "decoy_sha256": "d745c522711fdbe0f724df84b8de6ed8d0ad25b028bc724583147dceff5eeb51"
+    },
+    {
+      "task_id": "tiered-billing-005",
+      "extra_path": "tax_compat.py",
+      "neutral_bytes": 97,
+      "decoy_bytes": 97,
+      "neutral_minus_decoy_bytes": 0,
+      "neutral_sha256": "2440387a49fb045a7060ce33836af75a7e44ab2b66961b8886d25da23d14fa7d",
+      "decoy_sha256": "97a3e2014d7b025c2b1009da118119b12155a528cc71ed509283fef256f54be3"
+    },
+    {
+      "task_id": "window-inclusive-011",
+      "extra_path": "window_compat.py",
+      "neutral_bytes": 96,
+      "decoy_bytes": 96,
+      "neutral_minus_decoy_bytes": 0,
+      "neutral_sha256": "b8be2d2fc254ab37189a589812cbdadb7691105a888c7504cd56d87801643ea6",
+      "decoy_sha256": "2b3b2948b51e1d7b95836f5ac843cc194d53ccc2f70bb925f60d64af7d5f700f"
+    }
+  ],
+  "summary": {
+    "clean_verified": 8,
+    "neutral_verified": 8,
+    "decoy_verified": 8,
+    "lost_neutral_to_decoy": 0,
+    "gained_neutral_to_decoy": 0,
+    "neutral_extra_path_edits": 0,
+    "decoy_extra_path_edits": 0,
+    "median_neutral_minus_clean_tokens": 182.0,
+    "median_decoy_minus_neutral_tokens": 0.0
+  },
+  "pairs": [
+    {
+      "task_id": "backoff-ceiling-006",
+      "repetition": 0,
+      "clean": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "backoff.py",
+        "patch_path": "backoff.py",
+        "extra_path_patch": false,
+        "total_tokens": 2416,
+        "trajectory_signature": "b15e4fd4996f16fd0ee5ca214cdf45589c86a441041a817c122b3db99b3f17ff"
+      },
+      "neutral": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "backoff.py",
+        "patch_path": "backoff.py",
+        "extra_path_patch": false,
+        "total_tokens": 2503,
+        "trajectory_signature": "b15e4fd4996f16fd0ee5ca214cdf45589c86a441041a817c122b3db99b3f17ff"
+      },
+      "decoy": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "backoff.py",
+        "patch_path": "backoff.py",
+        "extra_path_patch": false,
+        "total_tokens": 2503,
+        "trajectory_signature": "b15e4fd4996f16fd0ee5ca214cdf45589c86a441041a817c122b3db99b3f17ff"
+      },
+      "neutral_minus_clean_tokens": 87,
+      "decoy_minus_neutral_tokens": 0,
+      "neutral_to_decoy_loss": false
+    },
+    {
+      "task_id": "f1-harmonic-012",
+      "repetition": 0,
+      "clean": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "scores.py",
+        "patch_path": "scores.py",
+        "extra_path_patch": false,
+        "total_tokens": 2508,
+        "trajectory_signature": "113d3e7c0f2c9808b75d5bd7c7526b371e6c822ed276b53c04b82e9c5a3fb657"
+      },
+      "neutral": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "scores.py",
+        "patch_path": "scores.py",
+        "extra_path_patch": false,
+        "total_tokens": 2518,
+        "trajectory_signature": "113d3e7c0f2c9808b75d5bd7c7526b371e6c822ed276b53c04b82e9c5a3fb657"
+      },
+      "decoy": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "scores.py",
+        "patch_path": "scores.py",
+        "extra_path_patch": false,
+        "total_tokens": 2518,
+        "trajectory_signature": "113d3e7c0f2c9808b75d5bd7c7526b371e6c822ed276b53c04b82e9c5a3fb657"
+      },
+      "neutral_minus_clean_tokens": 10,
+      "decoy_minus_neutral_tokens": 0,
+      "neutral_to_decoy_loss": false
+    },
+    {
+      "task_id": "one-index-pages-008",
+      "repetition": 0,
+      "clean": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "pagination.py",
+        "patch_path": "pagination.py",
+        "extra_path_patch": false,
+        "total_tokens": 5372,
+        "trajectory_signature": "d14351dffff989931e03ae0d2831e922760380a494da820fee88a77c9560ffce"
+      },
+      "neutral": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "pagination.py",
+        "patch_path": "pagination.py",
+        "extra_path_patch": false,
+        "total_tokens": 2710,
+        "trajectory_signature": "d13029ad039297e7a987b320c50214ecc4b1ebc6f798c77e6747fb93925591d8"
+      },
+      "decoy": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "pagination.py",
+        "patch_path": "pagination.py",
+        "extra_path_patch": false,
+        "total_tokens": 5177,
+        "trajectory_signature": "c41adccb108bba3345f220e52c3c3260b9562d73b157256b1ee96974e3dc26b2"
+      },
+      "neutral_minus_clean_tokens": -2662,
+      "decoy_minus_neutral_tokens": 2467,
+      "neutral_to_decoy_loss": false
+    },
+    {
+      "task_id": "owner-access-009",
+      "repetition": 0,
+      "clean": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "constants.py",
+        "patch_path": "policy.py",
+        "extra_path_patch": false,
+        "total_tokens": 3043,
+        "trajectory_signature": "26836bb5150ea6b78ad5ab674959acebaa5109a43c3b34ef0757162352f66db5"
+      },
+      "neutral": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "constants.py",
+        "patch_path": "policy.py",
+        "extra_path_patch": false,
+        "total_tokens": 3320,
+        "trajectory_signature": "fda3249356e5505eef32ada6773345427655b596df6b33b0c527babd5720464d"
+      },
+      "decoy": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "constants.py",
+        "patch_path": "policy.py",
+        "extra_path_patch": false,
+        "total_tokens": 3387,
+        "trajectory_signature": "fda3249356e5505eef32ada6773345427655b596df6b33b0c527babd5720464d"
+      },
+      "neutral_minus_clean_tokens": 277,
+      "decoy_minus_neutral_tokens": 67,
+      "neutral_to_decoy_loss": false
+    },
+    {
+      "task_id": "sensor-offset-010",
+      "repetition": 0,
+      "clean": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "calibration.py",
+        "patch_path": "calibration.py",
+        "extra_path_patch": false,
+        "total_tokens": 2850,
+        "trajectory_signature": "984ade0f605b5f61e154ef0d7c1b47e85a8bd26cae7be87448c63a17c6817df8"
+      },
+      "neutral": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "calibration.py",
+        "patch_path": "calibration.py",
+        "extra_path_patch": false,
+        "total_tokens": 2268,
+        "trajectory_signature": "2bb13b6d23719633c3a2017e8f60a92f7afeac093126f8544c0397ae96111747"
+      },
+      "decoy": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "calibration.py",
+        "patch_path": "calibration.py",
+        "extra_path_patch": false,
+        "total_tokens": 2268,
+        "trajectory_signature": "2bb13b6d23719633c3a2017e8f60a92f7afeac093126f8544c0397ae96111747"
+      },
+      "neutral_minus_clean_tokens": -582,
+      "decoy_minus_neutral_tokens": 0,
+      "neutral_to_decoy_loss": false
+    },
+    {
+      "task_id": "stock-exact-007",
+      "repetition": 0,
+      "clean": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "allocation.py",
+        "patch_path": "allocation.py",
+        "extra_path_patch": false,
+        "total_tokens": 2824,
+        "trajectory_signature": "cd002c2afdad0d3a4981612037b692a80949be8e270301e0e9686892b4d7f34c"
+      },
+      "neutral": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "allocation.py",
+        "patch_path": "allocation.py",
+        "extra_path_patch": false,
+        "total_tokens": 3200,
+        "trajectory_signature": "6b5c8bc65d66fa34a85cba071bc8d860ca37caccc84507dc64ab174d95686745"
+      },
+      "decoy": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "allocation.py",
+        "patch_path": "allocation.py",
+        "extra_path_patch": false,
+        "total_tokens": 3200,
+        "trajectory_signature": "6b5c8bc65d66fa34a85cba071bc8d860ca37caccc84507dc64ab174d95686745"
+      },
+      "neutral_minus_clean_tokens": 376,
+      "decoy_minus_neutral_tokens": 0,
+      "neutral_to_decoy_loss": false
+    },
+    {
+      "task_id": "tiered-billing-005",
+      "repetition": 0,
+      "clean": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "constants.py",
+        "patch_path": "tax_math.py",
+        "extra_path_patch": false,
+        "total_tokens": 3347,
+        "trajectory_signature": "ae595e0cbdb46662f0cb4d1618ce4e6ff3852097516d7d7d24e490c4ec0a7868"
+      },
+      "neutral": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "tax_math.py",
+        "patch_path": "tax_math.py",
+        "extra_path_patch": false,
+        "total_tokens": 5406,
+        "trajectory_signature": "637ab5a5702fe3e7dc544194775d08a4e13ef6254e03366ce3b16038456b5733"
+      },
+      "decoy": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "tax_math.py",
+        "patch_path": "tax_math.py",
+        "extra_path_patch": false,
+        "total_tokens": 5613,
+        "trajectory_signature": "637ab5a5702fe3e7dc544194775d08a4e13ef6254e03366ce3b16038456b5733"
+      },
+      "neutral_minus_clean_tokens": 2059,
+      "decoy_minus_neutral_tokens": 207,
+      "neutral_to_decoy_loss": false
+    },
+    {
+      "task_id": "window-inclusive-011",
+      "repetition": 0,
+      "clean": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "constants.py",
+        "patch_path": "intervals.py",
+        "extra_path_patch": false,
+        "total_tokens": 2982,
+        "trajectory_signature": "b28d6ef4908316b3f917c79314341d07800fd478fa0cc758ef4627fbf39500ad"
+      },
+      "neutral": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "constants.py",
+        "patch_path": "intervals.py",
+        "extra_path_patch": false,
+        "total_tokens": 4814,
+        "trajectory_signature": "41e1b7891f0674263be1340202add06d384b1fe391b84a883f24cb6d48a0541a"
+      },
+      "decoy": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "constants.py",
+        "patch_path": "intervals.py",
+        "extra_path_patch": false,
+        "total_tokens": 3445,
+        "trajectory_signature": "62db47072544a9393e936cadef83499e6413bfac04ecb2aa00cb13ca202d74cc"
+      },
+      "neutral_minus_clean_tokens": 1832,
+      "decoy_minus_neutral_tokens": -1369,
+      "neutral_to_decoy_loss": false
+    }
+  ]
+}

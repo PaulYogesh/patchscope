@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "experiment_id": "operative-off-v060",
+  "description": "v0.6 preliminary public runtime-reproducer contrast; not an independent scientific validation",
+  "conditions": [
+    "native",
+    "bm25",
+    "placebo",
+    "oracle"
+  ],
+  "repetitions": 1,
+  "randomization_seed": 20261026,
+  "model_seed_base": 62000,
+  "model": {
+    "primary": "qwen3.5:9b",
+    "temperature": 0,
+    "require_native_tools": true
+  },
+  "budgets": {
+    "max_steps": 6,
+    "max_tool_calls": 8,
+    "max_model_calls": 10,
+    "max_completion_tokens_per_call": 450,
+    "soft_total_token_budget": 11000,
+    "seed_char_budget": 1600,
+    "max_patch_retries": 1,
+    "max_patch_completion_tokens_per_call": 1600
+  },
+  "retrieval": {
+    "top_k": 1
+  },
+  "tasks": [
+    {
+      "task_id": "tax-dynamic-dispatch-013",
+      "repo_path": "fixtures/operative_v060/tax_dispatch",
+      "issue_path": "fixtures/operative_v060/tax_dispatch/issue.md",
+      "public_reproducer_path": "reproducers/public_v060/tax_dispatch.py",
+      "trusted_execution": true,
+      "verification": {
+        "kind": "pytest",
+        "timeout_seconds": 30
+      },
+      "oracle": {
+        "paths": [
+          "tax_core.py"
+        ]
+      },
+      "placebo_pool": [
+        "formatting.py"
+      ]
+    },
+    {
+      "task_id": "retry-dynamic-dispatch-014",
+      "repo_path": "fixtures/operative_v060/backoff_dispatch",
+      "issue_path": "fixtures/operative_v060/backoff_dispatch/issue.md",
+      "public_reproducer_path": "reproducers/public_v060/backoff_dispatch.py",
+      "trusted_execution": true,
+      "verification": {
+        "kind": "pytest",
+        "timeout_seconds": 30
+      },
+      "oracle": {
+        "paths": [
+          "backoff_core.py"
+        ]
+      },
+      "placebo_pool": [
+        "formatting.py"
+      ]
+    }
+  ],
+  "operative_trace_policy": "off"
+}

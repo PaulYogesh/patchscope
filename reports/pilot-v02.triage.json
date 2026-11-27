@@ -1,0 +1,460 @@
+{
+  "experiment_id": "pilot-v02",
+  "total_runs": 48,
+  "distinct_tasks": 4,
+  "distinct_task_condition_trajectories": 16,
+  "identical_repeat_groups": 16,
+  "total_task_condition_groups_with_multiple_runs": 16,
+  "by_condition": {
+    "bm25": {
+      "runs": 12,
+      "verified": 6,
+      "statuses": {
+        "error": 6,
+        "resolved": 6
+      },
+      "error_categories": {
+        "patch_contract_validation": 6
+      }
+    },
+    "native": {
+      "runs": 12,
+      "verified": 9,
+      "statuses": {
+        "error": 3,
+        "resolved": 9
+      },
+      "error_categories": {
+        "patch_contract_validation": 3
+      }
+    },
+    "oracle": {
+      "runs": 12,
+      "verified": 6,
+      "statuses": {
+        "error": 6,
+        "resolved": 6
+      },
+      "error_categories": {
+        "patch_contract_validation": 6
+      }
+    },
+    "placebo": {
+      "runs": 12,
+      "verified": 6,
+      "statuses": {
+        "error": 6,
+        "resolved": 6
+      },
+      "error_categories": {
+        "patch_contract_validation": 6
+      }
+    }
+  },
+  "by_task": [
+    {
+      "task_id": "mini-average-001",
+      "conditions": {
+        "native": {
+          "runs": 3,
+          "verified": 3,
+          "statuses": {
+            "resolved": 3
+          },
+          "error_categories": {},
+          "unique_trajectory_signatures": 1
+        },
+        "bm25": {
+          "runs": 3,
+          "verified": 3,
+          "statuses": {
+            "resolved": 3
+          },
+          "error_categories": {},
+          "unique_trajectory_signatures": 1
+        },
+        "placebo": {
+          "runs": 3,
+          "verified": 3,
+          "statuses": {
+            "resolved": 3
+          },
+          "error_categories": {},
+          "unique_trajectory_signatures": 1
+        },
+        "oracle": {
+          "runs": 3,
+          "verified": 3,
+          "statuses": {
+            "resolved": 3
+          },
+          "error_categories": {},
+          "unique_trajectory_signatures": 1
+        }
+      }
+    },
+    {
+      "task_id": "mini-clamp-002",
+      "conditions": {
+        "native": {
+          "runs": 3,
+          "verified": 3,
+          "statuses": {
+            "resolved": 3
+          },
+          "error_categories": {},
+          "unique_trajectory_signatures": 1
+        },
+        "bm25": {
+          "runs": 3,
+          "verified": 0,
+          "statuses": {
+            "error": 3
+          },
+          "error_categories": {
+            "patch_contract_validation": 3
+          },
+          "unique_trajectory_signatures": 1
+        },
+        "placebo": {
+          "runs": 3,
+          "verified": 0,
+          "statuses": {
+            "error": 3
+          },
+          "error_categories": {
+            "patch_contract_validation": 3
+          },
+          "unique_trajectory_signatures": 1
+        },
+        "oracle": {
+          "runs": 3,
+          "verified": 0,
+          "statuses": {
+            "error": 3
+          },
+          "error_categories": {
+            "patch_contract_validation": 3
+          },
+          "unique_trajectory_signatures": 1
+        }
+      }
+    },
+    {
+      "task_id": "mini-discount-004",
+      "conditions": {
+        "native": {
+          "runs": 3,
+          "verified": 3,
+          "statuses": {
+            "resolved": 3
+          },
+          "error_categories": {},
+          "unique_trajectory_signatures": 1
+        },
+        "bm25": {
+          "runs": 3,
+          "verified": 3,
+          "statuses": {
+            "resolved": 3
+          },
+          "error_categories": {},
+          "unique_trajectory_signatures": 1
+        },
+        "placebo": {
+          "runs": 3,
+          "verified": 3,
+          "statuses": {
+            "resolved": 3
+          },
+          "error_categories": {},
+          "unique_trajectory_signatures": 1
+        },
+        "oracle": {
+          "runs": 3,
+          "verified": 3,
+          "statuses": {
+            "resolved": 3
+          },
+          "error_categories": {},
+          "unique_trajectory_signatures": 1
+        }
+      }
+    },
+    {
+      "task_id": "mini-slug-003",
+      "conditions": {
+        "native": {
+          "runs": 3,
+          "verified": 0,
+          "statuses": {
+            "error": 3
+          },
+          "error_categories": {
+            "patch_contract_validation": 3
+          },
+          "unique_trajectory_signatures": 1
+        },
+        "bm25": {
+          "runs": 3,
+          "verified": 0,
+          "statuses": {
+            "error": 3
+          },
+          "error_categories": {
+            "patch_contract_validation": 3
+          },
+          "unique_trajectory_signatures": 1
+        },
+        "placebo": {
+          "runs": 3,
+          "verified": 0,
+          "statuses": {
+            "error": 3
+          },
+          "error_categories": {
+            "patch_contract_validation": 3
+          },
+          "unique_trajectory_signatures": 1
+        },
+        "oracle": {
+          "runs": 3,
+          "verified": 0,
+          "statuses": {
+            "error": 3
+          },
+          "error_categories": {
+            "patch_contract_validation": 3
+          },
+          "unique_trajectory_signatures": 1
+        }
+      }
+    }
+  ],
+  "failure_representatives": [
+    {
+      "run_id": "mini-clamp-002__bm25__r00",
+      "task_id": "mini-clamp-002",
+      "condition": "bm25",
+      "repetitions_with_same_diagnosis": 3,
+      "status": "error",
+      "failure_stage": "proposal_parsing_or_validation",
+      "error_category": "patch_contract_validation",
+      "error": "ValueError: invalid_patch_proposal",
+      "last_events": [
+        "tool_result",
+        "model_response",
+        "model_response"
+      ],
+      "proposal_present": false,
+      "baseline_passed": null,
+      "patched_passed": null
+    },
+    {
+      "run_id": "mini-clamp-002__placebo__r00",
+      "task_id": "mini-clamp-002",
+      "condition": "placebo",
+      "repetitions_with_same_diagnosis": 3,
+      "status": "error",
+      "failure_stage": "proposal_parsing_or_validation",
+      "error_category": "patch_contract_validation",
+      "error": "ValueError: invalid_patch_proposal",
+      "last_events": [
+        "tool_result",
+        "model_response",
+        "model_response"
+      ],
+      "proposal_present": false,
+      "baseline_passed": null,
+      "patched_passed": null
+    },
+    {
+      "run_id": "mini-clamp-002__oracle__r00",
+      "task_id": "mini-clamp-002",
+      "condition": "oracle",
+      "repetitions_with_same_diagnosis": 3,
+      "status": "error",
+      "failure_stage": "proposal_parsing_or_validation",
+      "error_category": "patch_contract_validation",
+      "error": "ValueError: invalid_patch_proposal",
+      "last_events": [
+        "tool_result",
+        "model_response",
+        "model_response"
+      ],
+      "proposal_present": false,
+      "baseline_passed": null,
+      "patched_passed": null
+    },
+    {
+      "run_id": "mini-slug-003__native__r00",
+      "task_id": "mini-slug-003",
+      "condition": "native",
+      "repetitions_with_same_diagnosis": 3,
+      "status": "error",
+      "failure_stage": "proposal_parsing_or_validation",
+      "error_category": "patch_contract_validation",
+      "error": "ValueError: invalid_patch_proposal",
+      "last_events": [
+        "tool_result",
+        "model_response",
+        "model_response"
+      ],
+      "proposal_present": false,
+      "baseline_passed": null,
+      "patched_passed": null
+    },
+    {
+      "run_id": "mini-slug-003__bm25__r00",
+      "task_id": "mini-slug-003",
+      "condition": "bm25",
+      "repetitions_with_same_diagnosis": 3,
+      "status": "error",
+      "failure_stage": "proposal_parsing_or_validation",
+      "error_category": "patch_contract_validation",
+      "error": "ValueError: invalid_patch_proposal",
+      "last_events": [
+        "tool_result",
+        "model_response",
+        "model_response"
+      ],
+      "proposal_present": false,
+      "baseline_passed": null,
+      "patched_passed": null
+    },
+    {
+      "run_id": "mini-slug-003__placebo__r00",
+      "task_id": "mini-slug-003",
+      "condition": "placebo",
+      "repetitions_with_same_diagnosis": 3,
+      "status": "error",
+      "failure_stage": "proposal_parsing_or_validation",
+      "error_category": "patch_contract_validation",
+      "error": "ValueError: invalid_patch_proposal",
+      "last_events": [
+        "tool_result",
+        "model_response",
+        "model_response"
+      ],
+      "proposal_present": false,
+      "baseline_passed": null,
+      "patched_passed": null
+    },
+    {
+      "run_id": "mini-slug-003__oracle__r00",
+      "task_id": "mini-slug-003",
+      "condition": "oracle",
+      "repetitions_with_same_diagnosis": 3,
+      "status": "error",
+      "failure_stage": "proposal_parsing_or_validation",
+      "error_category": "patch_contract_validation",
+      "error": "ValueError: invalid_patch_proposal",
+      "last_events": [
+        "tool_result",
+        "model_response",
+        "model_response"
+      ],
+      "proposal_present": false,
+      "baseline_passed": null,
+      "patched_passed": null
+    }
+  ],
+  "bm25_oracle_pairs": [
+    {
+      "task_id": "mini-average-001",
+      "repetition": 0,
+      "same_seeded_paths": true,
+      "same_seed_char_count": true,
+      "same_trajectory": true,
+      "same_total_tokens": true
+    },
+    {
+      "task_id": "mini-average-001",
+      "repetition": 1,
+      "same_seeded_paths": true,
+      "same_seed_char_count": true,
+      "same_trajectory": true,
+      "same_total_tokens": true
+    },
+    {
+      "task_id": "mini-average-001",
+      "repetition": 2,
+      "same_seeded_paths": true,
+      "same_seed_char_count": true,
+      "same_trajectory": true,
+      "same_total_tokens": true
+    },
+    {
+      "task_id": "mini-clamp-002",
+      "repetition": 0,
+      "same_seeded_paths": true,
+      "same_seed_char_count": true,
+      "same_trajectory": true,
+      "same_total_tokens": true
+    },
+    {
+      "task_id": "mini-clamp-002",
+      "repetition": 1,
+      "same_seeded_paths": true,
+      "same_seed_char_count": true,
+      "same_trajectory": true,
+      "same_total_tokens": true
+    },
+    {
+      "task_id": "mini-clamp-002",
+      "repetition": 2,
+      "same_seeded_paths": true,
+      "same_seed_char_count": true,
+      "same_trajectory": true,
+      "same_total_tokens": true
+    },
+    {
+      "task_id": "mini-discount-004",
+      "repetition": 0,
+      "same_seeded_paths": true,
+      "same_seed_char_count": true,
+      "same_trajectory": true,
+      "same_total_tokens": true
+    },
+    {
+      "task_id": "mini-discount-004",
+      "repetition": 1,
+      "same_seeded_paths": true,
+      "same_seed_char_count": true,
+      "same_trajectory": true,
+      "same_total_tokens": true
+    },
+    {
+      "task_id": "mini-discount-004",
+      "repetition": 2,
+      "same_seeded_paths": true,
+      "same_seed_char_count": true,
+      "same_trajectory": true,
+      "same_total_tokens": true
+    },
+    {
+      "task_id": "mini-slug-003",
+      "repetition": 0,
+      "same_seeded_paths": true,
+      "same_seed_char_count": true,
+      "same_trajectory": true,
+      "same_total_tokens": true
+    },
+    {
+      "task_id": "mini-slug-003",
+      "repetition": 1,
+      "same_seeded_paths": true,
+      "same_seed_char_count": true,
+      "same_trajectory": true,
+      "same_total_tokens": true
+    },
+    {
+      "task_id": "mini-slug-003",
+      "repetition": 2,
+      "same_seeded_paths": true,
+      "same_seed_char_count": true,
+      "same_trajectory": true,
+      "same_total_tokens": true
+    }
+  ]
+}

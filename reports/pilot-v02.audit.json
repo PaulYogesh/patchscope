@@ -1,0 +1,1062 @@
+{
+  "experiment_id": "pilot-v02",
+  "total_runs": 48,
+  "conditions": {
+    "bm25": {
+      "runs": 12,
+      "seeded_oracle": 12,
+      "oracle_observed": 12,
+      "off_target_reads": 27,
+      "repeated_reads": 3,
+      "read_expansions": 0,
+      "verified_repairs": 6
+    },
+    "native": {
+      "runs": 12,
+      "seeded_oracle": 0,
+      "oracle_observed": 12,
+      "off_target_reads": 36,
+      "repeated_reads": 0,
+      "read_expansions": 0,
+      "verified_repairs": 9
+    },
+    "oracle": {
+      "runs": 12,
+      "seeded_oracle": 12,
+      "oracle_observed": 12,
+      "off_target_reads": 27,
+      "repeated_reads": 3,
+      "read_expansions": 0,
+      "verified_repairs": 6
+    },
+    "placebo": {
+      "runs": 12,
+      "seeded_oracle": 0,
+      "oracle_observed": 12,
+      "off_target_reads": 21,
+      "repeated_reads": 6,
+      "read_expansions": 0,
+      "verified_repairs": 6
+    }
+  },
+  "identical_repeat_groups": [
+    {
+      "task_id": "mini-average-001",
+      "condition": "bm25",
+      "repetitions": 3
+    },
+    {
+      "task_id": "mini-average-001",
+      "condition": "native",
+      "repetitions": 3
+    },
+    {
+      "task_id": "mini-average-001",
+      "condition": "oracle",
+      "repetitions": 3
+    },
+    {
+      "task_id": "mini-average-001",
+      "condition": "placebo",
+      "repetitions": 3
+    },
+    {
+      "task_id": "mini-clamp-002",
+      "condition": "bm25",
+      "repetitions": 3
+    },
+    {
+      "task_id": "mini-clamp-002",
+      "condition": "native",
+      "repetitions": 3
+    },
+    {
+      "task_id": "mini-clamp-002",
+      "condition": "oracle",
+      "repetitions": 3
+    },
+    {
+      "task_id": "mini-clamp-002",
+      "condition": "placebo",
+      "repetitions": 3
+    },
+    {
+      "task_id": "mini-discount-004",
+      "condition": "bm25",
+      "repetitions": 3
+    },
+    {
+      "task_id": "mini-discount-004",
+      "condition": "native",
+      "repetitions": 3
+    },
+    {
+      "task_id": "mini-discount-004",
+      "condition": "oracle",
+      "repetitions": 3
+    },
+    {
+      "task_id": "mini-discount-004",
+      "condition": "placebo",
+      "repetitions": 3
+    },
+    {
+      "task_id": "mini-slug-003",
+      "condition": "bm25",
+      "repetitions": 3
+    },
+    {
+      "task_id": "mini-slug-003",
+      "condition": "native",
+      "repetitions": 3
+    },
+    {
+      "task_id": "mini-slug-003",
+      "condition": "oracle",
+      "repetitions": 3
+    },
+    {
+      "task_id": "mini-slug-003",
+      "condition": "placebo",
+      "repetitions": 3
+    }
+  ],
+  "runs": [
+    {
+      "run_id": "mini-average-001__bm25__r00",
+      "task_id": "mini-average-001",
+      "condition": "bm25",
+      "repetition": 0,
+      "seeded_oracle": true,
+      "seeded_paths": [
+        "calculator.py"
+      ],
+      "first_read_path": "billing.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 0,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "0b7c97088aaa683e90c66ef547fbbc2eefe89131b824a8ed851cfb8fc5718a19"
+    },
+    {
+      "run_id": "mini-average-001__bm25__r01",
+      "task_id": "mini-average-001",
+      "condition": "bm25",
+      "repetition": 1,
+      "seeded_oracle": true,
+      "seeded_paths": [
+        "calculator.py"
+      ],
+      "first_read_path": "billing.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 0,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "0b7c97088aaa683e90c66ef547fbbc2eefe89131b824a8ed851cfb8fc5718a19"
+    },
+    {
+      "run_id": "mini-average-001__bm25__r02",
+      "task_id": "mini-average-001",
+      "condition": "bm25",
+      "repetition": 2,
+      "seeded_oracle": true,
+      "seeded_paths": [
+        "calculator.py"
+      ],
+      "first_read_path": "billing.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 0,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "0b7c97088aaa683e90c66ef547fbbc2eefe89131b824a8ed851cfb8fc5718a19"
+    },
+    {
+      "run_id": "mini-average-001__native__r00",
+      "task_id": "mini-average-001",
+      "condition": "native",
+      "repetition": 0,
+      "seeded_oracle": false,
+      "seeded_paths": [],
+      "first_read_path": "billing.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "302ed21dd5e3b72c68061d76ab4f749798247da5e0ac2bb5288e939494b09229"
+    },
+    {
+      "run_id": "mini-average-001__native__r01",
+      "task_id": "mini-average-001",
+      "condition": "native",
+      "repetition": 1,
+      "seeded_oracle": false,
+      "seeded_paths": [],
+      "first_read_path": "billing.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "302ed21dd5e3b72c68061d76ab4f749798247da5e0ac2bb5288e939494b09229"
+    },
+    {
+      "run_id": "mini-average-001__native__r02",
+      "task_id": "mini-average-001",
+      "condition": "native",
+      "repetition": 2,
+      "seeded_oracle": false,
+      "seeded_paths": [],
+      "first_read_path": "billing.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "302ed21dd5e3b72c68061d76ab4f749798247da5e0ac2bb5288e939494b09229"
+    },
+    {
+      "run_id": "mini-average-001__oracle__r00",
+      "task_id": "mini-average-001",
+      "condition": "oracle",
+      "repetition": 0,
+      "seeded_oracle": true,
+      "seeded_paths": [
+        "calculator.py"
+      ],
+      "first_read_path": "billing.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 0,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "0b7c97088aaa683e90c66ef547fbbc2eefe89131b824a8ed851cfb8fc5718a19"
+    },
+    {
+      "run_id": "mini-average-001__oracle__r01",
+      "task_id": "mini-average-001",
+      "condition": "oracle",
+      "repetition": 1,
+      "seeded_oracle": true,
+      "seeded_paths": [
+        "calculator.py"
+      ],
+      "first_read_path": "billing.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 0,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "0b7c97088aaa683e90c66ef547fbbc2eefe89131b824a8ed851cfb8fc5718a19"
+    },
+    {
+      "run_id": "mini-average-001__oracle__r02",
+      "task_id": "mini-average-001",
+      "condition": "oracle",
+      "repetition": 2,
+      "seeded_oracle": true,
+      "seeded_paths": [
+        "calculator.py"
+      ],
+      "first_read_path": "billing.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 0,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "0b7c97088aaa683e90c66ef547fbbc2eefe89131b824a8ed851cfb8fc5718a19"
+    },
+    {
+      "run_id": "mini-average-001__placebo__r00",
+      "task_id": "mini-average-001",
+      "condition": "placebo",
+      "repetition": 0,
+      "seeded_oracle": false,
+      "seeded_paths": [
+        "billing.py"
+      ],
+      "first_read_path": "statistics.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 2,
+      "repeat_reads": 1,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "d45ef3514b6ef308dd0a085f015a5cd5ed92ca026b2362b789d7f97abefec48f"
+    },
+    {
+      "run_id": "mini-average-001__placebo__r01",
+      "task_id": "mini-average-001",
+      "condition": "placebo",
+      "repetition": 1,
+      "seeded_oracle": false,
+      "seeded_paths": [
+        "billing.py"
+      ],
+      "first_read_path": "statistics.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 2,
+      "repeat_reads": 1,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "d45ef3514b6ef308dd0a085f015a5cd5ed92ca026b2362b789d7f97abefec48f"
+    },
+    {
+      "run_id": "mini-average-001__placebo__r02",
+      "task_id": "mini-average-001",
+      "condition": "placebo",
+      "repetition": 2,
+      "seeded_oracle": false,
+      "seeded_paths": [
+        "billing.py"
+      ],
+      "first_read_path": "statistics.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 2,
+      "repeat_reads": 1,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "d45ef3514b6ef308dd0a085f015a5cd5ed92ca026b2362b789d7f97abefec48f"
+    },
+    {
+      "run_id": "mini-clamp-002__bm25__r00",
+      "task_id": "mini-clamp-002",
+      "condition": "bm25",
+      "repetition": 0,
+      "seeded_oracle": true,
+      "seeded_paths": [
+        "limits.py"
+      ],
+      "first_read_path": "discounts.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 0,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": null,
+      "verified": false,
+      "trajectory_signature": "ecb2b720972dc3c77905c5a292f2aa65e2d401ffd127180dc9258168238b1dce"
+    },
+    {
+      "run_id": "mini-clamp-002__bm25__r01",
+      "task_id": "mini-clamp-002",
+      "condition": "bm25",
+      "repetition": 1,
+      "seeded_oracle": true,
+      "seeded_paths": [
+        "limits.py"
+      ],
+      "first_read_path": "discounts.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 0,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": null,
+      "verified": false,
+      "trajectory_signature": "ecb2b720972dc3c77905c5a292f2aa65e2d401ffd127180dc9258168238b1dce"
+    },
+    {
+      "run_id": "mini-clamp-002__bm25__r02",
+      "task_id": "mini-clamp-002",
+      "condition": "bm25",
+      "repetition": 2,
+      "seeded_oracle": true,
+      "seeded_paths": [
+        "limits.py"
+      ],
+      "first_read_path": "discounts.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 0,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": null,
+      "verified": false,
+      "trajectory_signature": "ecb2b720972dc3c77905c5a292f2aa65e2d401ffd127180dc9258168238b1dce"
+    },
+    {
+      "run_id": "mini-clamp-002__native__r00",
+      "task_id": "mini-clamp-002",
+      "condition": "native",
+      "repetition": 0,
+      "seeded_oracle": false,
+      "seeded_paths": [],
+      "first_read_path": "discounts.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "e79f8e31dbea2d68c4a327b25d265be48b3ac22418c7499373f89538ed0eda65"
+    },
+    {
+      "run_id": "mini-clamp-002__native__r01",
+      "task_id": "mini-clamp-002",
+      "condition": "native",
+      "repetition": 1,
+      "seeded_oracle": false,
+      "seeded_paths": [],
+      "first_read_path": "discounts.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "e79f8e31dbea2d68c4a327b25d265be48b3ac22418c7499373f89538ed0eda65"
+    },
+    {
+      "run_id": "mini-clamp-002__native__r02",
+      "task_id": "mini-clamp-002",
+      "condition": "native",
+      "repetition": 2,
+      "seeded_oracle": false,
+      "seeded_paths": [],
+      "first_read_path": "discounts.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "e79f8e31dbea2d68c4a327b25d265be48b3ac22418c7499373f89538ed0eda65"
+    },
+    {
+      "run_id": "mini-clamp-002__oracle__r00",
+      "task_id": "mini-clamp-002",
+      "condition": "oracle",
+      "repetition": 0,
+      "seeded_oracle": true,
+      "seeded_paths": [
+        "limits.py"
+      ],
+      "first_read_path": "discounts.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 0,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": null,
+      "verified": false,
+      "trajectory_signature": "ecb2b720972dc3c77905c5a292f2aa65e2d401ffd127180dc9258168238b1dce"
+    },
+    {
+      "run_id": "mini-clamp-002__oracle__r01",
+      "task_id": "mini-clamp-002",
+      "condition": "oracle",
+      "repetition": 1,
+      "seeded_oracle": true,
+      "seeded_paths": [
+        "limits.py"
+      ],
+      "first_read_path": "discounts.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 0,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": null,
+      "verified": false,
+      "trajectory_signature": "ecb2b720972dc3c77905c5a292f2aa65e2d401ffd127180dc9258168238b1dce"
+    },
+    {
+      "run_id": "mini-clamp-002__oracle__r02",
+      "task_id": "mini-clamp-002",
+      "condition": "oracle",
+      "repetition": 2,
+      "seeded_oracle": true,
+      "seeded_paths": [
+        "limits.py"
+      ],
+      "first_read_path": "discounts.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 0,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": null,
+      "verified": false,
+      "trajectory_signature": "ecb2b720972dc3c77905c5a292f2aa65e2d401ffd127180dc9258168238b1dce"
+    },
+    {
+      "run_id": "mini-clamp-002__placebo__r00",
+      "task_id": "mini-clamp-002",
+      "condition": "placebo",
+      "repetition": 0,
+      "seeded_oracle": false,
+      "seeded_paths": [
+        "window.py"
+      ],
+      "first_read_path": "discounts.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 2,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": null,
+      "verified": false,
+      "trajectory_signature": "4a692a9dac2320059922506e7a78a7e521ce6cd42d169c768e10c7f835725fcf"
+    },
+    {
+      "run_id": "mini-clamp-002__placebo__r01",
+      "task_id": "mini-clamp-002",
+      "condition": "placebo",
+      "repetition": 1,
+      "seeded_oracle": false,
+      "seeded_paths": [
+        "window.py"
+      ],
+      "first_read_path": "discounts.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 2,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": null,
+      "verified": false,
+      "trajectory_signature": "4a692a9dac2320059922506e7a78a7e521ce6cd42d169c768e10c7f835725fcf"
+    },
+    {
+      "run_id": "mini-clamp-002__placebo__r02",
+      "task_id": "mini-clamp-002",
+      "condition": "placebo",
+      "repetition": 2,
+      "seeded_oracle": false,
+      "seeded_paths": [
+        "window.py"
+      ],
+      "first_read_path": "discounts.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 2,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": null,
+      "verified": false,
+      "trajectory_signature": "4a692a9dac2320059922506e7a78a7e521ce6cd42d169c768e10c7f835725fcf"
+    },
+    {
+      "run_id": "mini-discount-004__bm25__r00",
+      "task_id": "mini-discount-004",
+      "condition": "bm25",
+      "repetition": 0,
+      "seeded_oracle": true,
+      "seeded_paths": [
+        "checkout.py"
+      ],
+      "first_read_path": "currency.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 0,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "6a8b629bdd58cc068740f8e45717683faf54351c55bac879654d983f6d9411b3"
+    },
+    {
+      "run_id": "mini-discount-004__bm25__r01",
+      "task_id": "mini-discount-004",
+      "condition": "bm25",
+      "repetition": 1,
+      "seeded_oracle": true,
+      "seeded_paths": [
+        "checkout.py"
+      ],
+      "first_read_path": "currency.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 0,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "6a8b629bdd58cc068740f8e45717683faf54351c55bac879654d983f6d9411b3"
+    },
+    {
+      "run_id": "mini-discount-004__bm25__r02",
+      "task_id": "mini-discount-004",
+      "condition": "bm25",
+      "repetition": 2,
+      "seeded_oracle": true,
+      "seeded_paths": [
+        "checkout.py"
+      ],
+      "first_read_path": "currency.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 0,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "6a8b629bdd58cc068740f8e45717683faf54351c55bac879654d983f6d9411b3"
+    },
+    {
+      "run_id": "mini-discount-004__native__r00",
+      "task_id": "mini-discount-004",
+      "condition": "native",
+      "repetition": 0,
+      "seeded_oracle": false,
+      "seeded_paths": [],
+      "first_read_path": "checkout.py",
+      "first_read_is_oracle": true,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "39aed702c498bf2d8544f150c3a01a22cf62b93d7cfc386ba54326d5ee521f58"
+    },
+    {
+      "run_id": "mini-discount-004__native__r01",
+      "task_id": "mini-discount-004",
+      "condition": "native",
+      "repetition": 1,
+      "seeded_oracle": false,
+      "seeded_paths": [],
+      "first_read_path": "checkout.py",
+      "first_read_is_oracle": true,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "39aed702c498bf2d8544f150c3a01a22cf62b93d7cfc386ba54326d5ee521f58"
+    },
+    {
+      "run_id": "mini-discount-004__native__r02",
+      "task_id": "mini-discount-004",
+      "condition": "native",
+      "repetition": 2,
+      "seeded_oracle": false,
+      "seeded_paths": [],
+      "first_read_path": "checkout.py",
+      "first_read_is_oracle": true,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "39aed702c498bf2d8544f150c3a01a22cf62b93d7cfc386ba54326d5ee521f58"
+    },
+    {
+      "run_id": "mini-discount-004__oracle__r00",
+      "task_id": "mini-discount-004",
+      "condition": "oracle",
+      "repetition": 0,
+      "seeded_oracle": true,
+      "seeded_paths": [
+        "checkout.py"
+      ],
+      "first_read_path": "currency.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 0,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "6a8b629bdd58cc068740f8e45717683faf54351c55bac879654d983f6d9411b3"
+    },
+    {
+      "run_id": "mini-discount-004__oracle__r01",
+      "task_id": "mini-discount-004",
+      "condition": "oracle",
+      "repetition": 1,
+      "seeded_oracle": true,
+      "seeded_paths": [
+        "checkout.py"
+      ],
+      "first_read_path": "currency.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 0,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "6a8b629bdd58cc068740f8e45717683faf54351c55bac879654d983f6d9411b3"
+    },
+    {
+      "run_id": "mini-discount-004__oracle__r02",
+      "task_id": "mini-discount-004",
+      "condition": "oracle",
+      "repetition": 2,
+      "seeded_oracle": true,
+      "seeded_paths": [
+        "checkout.py"
+      ],
+      "first_read_path": "currency.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 0,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "6a8b629bdd58cc068740f8e45717683faf54351c55bac879654d983f6d9411b3"
+    },
+    {
+      "run_id": "mini-discount-004__placebo__r00",
+      "task_id": "mini-discount-004",
+      "condition": "placebo",
+      "repetition": 0,
+      "seeded_oracle": false,
+      "seeded_paths": [
+        "promotions.py"
+      ],
+      "first_read_path": "checkout.py",
+      "first_read_is_oracle": true,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 0,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "ba52e844b8ba4a0c2c582da3a98ed35314b4b0f538259b743aeb0648f33470ee"
+    },
+    {
+      "run_id": "mini-discount-004__placebo__r01",
+      "task_id": "mini-discount-004",
+      "condition": "placebo",
+      "repetition": 1,
+      "seeded_oracle": false,
+      "seeded_paths": [
+        "promotions.py"
+      ],
+      "first_read_path": "checkout.py",
+      "first_read_is_oracle": true,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 0,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "ba52e844b8ba4a0c2c582da3a98ed35314b4b0f538259b743aeb0648f33470ee"
+    },
+    {
+      "run_id": "mini-discount-004__placebo__r02",
+      "task_id": "mini-discount-004",
+      "condition": "placebo",
+      "repetition": 2,
+      "seeded_oracle": false,
+      "seeded_paths": [
+        "promotions.py"
+      ],
+      "first_read_path": "checkout.py",
+      "first_read_is_oracle": true,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 0,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": true,
+      "verified": true,
+      "trajectory_signature": "ba52e844b8ba4a0c2c582da3a98ed35314b4b0f538259b743aeb0648f33470ee"
+    },
+    {
+      "run_id": "mini-slug-003__bm25__r00",
+      "task_id": "mini-slug-003",
+      "condition": "bm25",
+      "repetition": 0,
+      "seeded_oracle": true,
+      "seeded_paths": [
+        "text_ops.py"
+      ],
+      "first_read_path": "text_ops.py",
+      "first_read_is_oracle": true,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 0,
+      "repeat_reads": 1,
+      "read_expansions": 0,
+      "patch_in_oracle_file": null,
+      "verified": false,
+      "trajectory_signature": "2d45af3066a7a78711a66d5af698c3c5d091f7d9aba66bfe4e9451b1c0e02221"
+    },
+    {
+      "run_id": "mini-slug-003__bm25__r01",
+      "task_id": "mini-slug-003",
+      "condition": "bm25",
+      "repetition": 1,
+      "seeded_oracle": true,
+      "seeded_paths": [
+        "text_ops.py"
+      ],
+      "first_read_path": "text_ops.py",
+      "first_read_is_oracle": true,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 0,
+      "repeat_reads": 1,
+      "read_expansions": 0,
+      "patch_in_oracle_file": null,
+      "verified": false,
+      "trajectory_signature": "2d45af3066a7a78711a66d5af698c3c5d091f7d9aba66bfe4e9451b1c0e02221"
+    },
+    {
+      "run_id": "mini-slug-003__bm25__r02",
+      "task_id": "mini-slug-003",
+      "condition": "bm25",
+      "repetition": 2,
+      "seeded_oracle": true,
+      "seeded_paths": [
+        "text_ops.py"
+      ],
+      "first_read_path": "text_ops.py",
+      "first_read_is_oracle": true,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 0,
+      "repeat_reads": 1,
+      "read_expansions": 0,
+      "patch_in_oracle_file": null,
+      "verified": false,
+      "trajectory_signature": "2d45af3066a7a78711a66d5af698c3c5d091f7d9aba66bfe4e9451b1c0e02221"
+    },
+    {
+      "run_id": "mini-slug-003__native__r00",
+      "task_id": "mini-slug-003",
+      "condition": "native",
+      "repetition": 0,
+      "seeded_oracle": false,
+      "seeded_paths": [],
+      "first_read_path": "capitalize.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": null,
+      "verified": false,
+      "trajectory_signature": "5fe33be5416cdd8b719bddf6c22edb60e526f9f8340974ac5854c56f105d2a07"
+    },
+    {
+      "run_id": "mini-slug-003__native__r01",
+      "task_id": "mini-slug-003",
+      "condition": "native",
+      "repetition": 1,
+      "seeded_oracle": false,
+      "seeded_paths": [],
+      "first_read_path": "capitalize.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": null,
+      "verified": false,
+      "trajectory_signature": "5fe33be5416cdd8b719bddf6c22edb60e526f9f8340974ac5854c56f105d2a07"
+    },
+    {
+      "run_id": "mini-slug-003__native__r02",
+      "task_id": "mini-slug-003",
+      "condition": "native",
+      "repetition": 2,
+      "seeded_oracle": false,
+      "seeded_paths": [],
+      "first_read_path": "capitalize.py",
+      "first_read_is_oracle": false,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 3,
+      "repeat_reads": 0,
+      "read_expansions": 0,
+      "patch_in_oracle_file": null,
+      "verified": false,
+      "trajectory_signature": "5fe33be5416cdd8b719bddf6c22edb60e526f9f8340974ac5854c56f105d2a07"
+    },
+    {
+      "run_id": "mini-slug-003__oracle__r00",
+      "task_id": "mini-slug-003",
+      "condition": "oracle",
+      "repetition": 0,
+      "seeded_oracle": true,
+      "seeded_paths": [
+        "text_ops.py"
+      ],
+      "first_read_path": "text_ops.py",
+      "first_read_is_oracle": true,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 0,
+      "repeat_reads": 1,
+      "read_expansions": 0,
+      "patch_in_oracle_file": null,
+      "verified": false,
+      "trajectory_signature": "2d45af3066a7a78711a66d5af698c3c5d091f7d9aba66bfe4e9451b1c0e02221"
+    },
+    {
+      "run_id": "mini-slug-003__oracle__r01",
+      "task_id": "mini-slug-003",
+      "condition": "oracle",
+      "repetition": 1,
+      "seeded_oracle": true,
+      "seeded_paths": [
+        "text_ops.py"
+      ],
+      "first_read_path": "text_ops.py",
+      "first_read_is_oracle": true,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 0,
+      "repeat_reads": 1,
+      "read_expansions": 0,
+      "patch_in_oracle_file": null,
+      "verified": false,
+      "trajectory_signature": "2d45af3066a7a78711a66d5af698c3c5d091f7d9aba66bfe4e9451b1c0e02221"
+    },
+    {
+      "run_id": "mini-slug-003__oracle__r02",
+      "task_id": "mini-slug-003",
+      "condition": "oracle",
+      "repetition": 2,
+      "seeded_oracle": true,
+      "seeded_paths": [
+        "text_ops.py"
+      ],
+      "first_read_path": "text_ops.py",
+      "first_read_is_oracle": true,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 0,
+      "repeat_reads": 1,
+      "read_expansions": 0,
+      "patch_in_oracle_file": null,
+      "verified": false,
+      "trajectory_signature": "2d45af3066a7a78711a66d5af698c3c5d091f7d9aba66bfe4e9451b1c0e02221"
+    },
+    {
+      "run_id": "mini-slug-003__placebo__r00",
+      "task_id": "mini-slug-003",
+      "condition": "placebo",
+      "repetition": 0,
+      "seeded_oracle": false,
+      "seeded_paths": [
+        "capitalize.py"
+      ],
+      "first_read_path": "text_ops.py",
+      "first_read_is_oracle": true,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 3,
+      "repeat_reads": 1,
+      "read_expansions": 0,
+      "patch_in_oracle_file": null,
+      "verified": false,
+      "trajectory_signature": "c0e2818c48b9435e0297ac32ea78e5bca07fd637dd58a731348ec0d20aca86fd"
+    },
+    {
+      "run_id": "mini-slug-003__placebo__r01",
+      "task_id": "mini-slug-003",
+      "condition": "placebo",
+      "repetition": 1,
+      "seeded_oracle": false,
+      "seeded_paths": [
+        "capitalize.py"
+      ],
+      "first_read_path": "text_ops.py",
+      "first_read_is_oracle": true,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 3,
+      "repeat_reads": 1,
+      "read_expansions": 0,
+      "patch_in_oracle_file": null,
+      "verified": false,
+      "trajectory_signature": "c0e2818c48b9435e0297ac32ea78e5bca07fd637dd58a731348ec0d20aca86fd"
+    },
+    {
+      "run_id": "mini-slug-003__placebo__r02",
+      "task_id": "mini-slug-003",
+      "condition": "placebo",
+      "repetition": 2,
+      "seeded_oracle": false,
+      "seeded_paths": [
+        "capitalize.py"
+      ],
+      "first_read_path": "text_ops.py",
+      "first_read_is_oracle": true,
+      "oracle_observed": true,
+      "oracle_tool_reads": 1,
+      "off_target_reads": 3,
+      "repeat_reads": 1,
+      "read_expansions": 0,
+      "patch_in_oracle_file": null,
+      "verified": false,
+      "trajectory_signature": "c0e2818c48b9435e0297ac32ea78e5bca07fd637dd58a731348ec0d20aca86fd"
+    }
+  ]
+}

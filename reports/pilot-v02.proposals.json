@@ -1,0 +1,249 @@
+{
+  "total_runs": 48,
+  "outcome_counts": {
+    "error": 21,
+    "resolved": 27
+  },
+  "groups": [
+    {
+      "task": "mini-average-001",
+      "condition": "bm25",
+      "runs_in_group": 3,
+      "status": "resolved",
+      "original_response": {
+        "code": "proposal_response_not_found",
+        "response_chars": 0,
+        "fields": [],
+        "valid_json_object": false
+      },
+      "proposal_completion_tokens": 193,
+      "per_call_completion_ceiling": 450,
+      "proposal_rejections": []
+    },
+    {
+      "task": "mini-average-001",
+      "condition": "native",
+      "runs_in_group": 3,
+      "status": "resolved",
+      "original_response": {
+        "code": "proposal_response_not_found",
+        "response_chars": 0,
+        "fields": [],
+        "valid_json_object": false
+      },
+      "proposal_completion_tokens": 235,
+      "per_call_completion_ceiling": 450,
+      "proposal_rejections": []
+    },
+    {
+      "task": "mini-average-001",
+      "condition": "oracle",
+      "runs_in_group": 3,
+      "status": "resolved",
+      "original_response": {
+        "code": "proposal_response_not_found",
+        "response_chars": 0,
+        "fields": [],
+        "valid_json_object": false
+      },
+      "proposal_completion_tokens": 193,
+      "per_call_completion_ceiling": 450,
+      "proposal_rejections": []
+    },
+    {
+      "task": "mini-average-001",
+      "condition": "placebo",
+      "runs_in_group": 3,
+      "status": "resolved",
+      "original_response": {
+        "code": "proposal_response_not_found",
+        "response_chars": 0,
+        "fields": [],
+        "valid_json_object": false
+      },
+      "proposal_completion_tokens": 229,
+      "per_call_completion_ceiling": 450,
+      "proposal_rejections": []
+    },
+    {
+      "task": "mini-clamp-002",
+      "condition": "bm25",
+      "runs_in_group": 3,
+      "status": "error",
+      "original_response": {
+        "code": "proposal_response_not_found",
+        "response_chars": 0,
+        "fields": [],
+        "valid_json_object": false
+      },
+      "proposal_completion_tokens": 450,
+      "per_call_completion_ceiling": 450,
+      "proposal_rejections": []
+    },
+    {
+      "task": "mini-clamp-002",
+      "condition": "native",
+      "runs_in_group": 3,
+      "status": "resolved",
+      "original_response": {
+        "code": "proposal_response_not_found",
+        "response_chars": 0,
+        "fields": [],
+        "valid_json_object": false
+      },
+      "proposal_completion_tokens": 302,
+      "per_call_completion_ceiling": 450,
+      "proposal_rejections": []
+    },
+    {
+      "task": "mini-clamp-002",
+      "condition": "oracle",
+      "runs_in_group": 3,
+      "status": "error",
+      "original_response": {
+        "code": "proposal_response_not_found",
+        "response_chars": 0,
+        "fields": [],
+        "valid_json_object": false
+      },
+      "proposal_completion_tokens": 450,
+      "per_call_completion_ceiling": 450,
+      "proposal_rejections": []
+    },
+    {
+      "task": "mini-clamp-002",
+      "condition": "placebo",
+      "runs_in_group": 3,
+      "status": "error",
+      "original_response": {
+        "code": "proposal_response_not_found",
+        "response_chars": 0,
+        "fields": [],
+        "valid_json_object": false
+      },
+      "proposal_completion_tokens": 450,
+      "per_call_completion_ceiling": 450,
+      "proposal_rejections": []
+    },
+    {
+      "task": "mini-discount-004",
+      "condition": "bm25",
+      "runs_in_group": 3,
+      "status": "resolved",
+      "original_response": {
+        "code": "proposal_response_not_found",
+        "response_chars": 0,
+        "fields": [],
+        "valid_json_object": false
+      },
+      "proposal_completion_tokens": 312,
+      "per_call_completion_ceiling": 450,
+      "proposal_rejections": []
+    },
+    {
+      "task": "mini-discount-004",
+      "condition": "native",
+      "runs_in_group": 3,
+      "status": "resolved",
+      "original_response": {
+        "code": "proposal_response_not_found",
+        "response_chars": 0,
+        "fields": [],
+        "valid_json_object": false
+      },
+      "proposal_completion_tokens": 312,
+      "per_call_completion_ceiling": 450,
+      "proposal_rejections": []
+    },
+    {
+      "task": "mini-discount-004",
+      "condition": "oracle",
+      "runs_in_group": 3,
+      "status": "resolved",
+      "original_response": {
+        "code": "proposal_response_not_found",
+        "response_chars": 0,
+        "fields": [],
+        "valid_json_object": false
+      },
+      "proposal_completion_tokens": 312,
+      "per_call_completion_ceiling": 450,
+      "proposal_rejections": []
+    },
+    {
+      "task": "mini-discount-004",
+      "condition": "placebo",
+      "runs_in_group": 3,
+      "status": "resolved",
+      "original_response": {
+        "code": "proposal_response_not_found",
+        "response_chars": 0,
+        "fields": [],
+        "valid_json_object": false
+      },
+      "proposal_completion_tokens": 316,
+      "per_call_completion_ceiling": 450,
+      "proposal_rejections": []
+    },
+    {
+      "task": "mini-slug-003",
+      "condition": "bm25",
+      "runs_in_group": 3,
+      "status": "error",
+      "original_response": {
+        "code": "proposal_response_not_found",
+        "response_chars": 0,
+        "fields": [],
+        "valid_json_object": false
+      },
+      "proposal_completion_tokens": 450,
+      "per_call_completion_ceiling": 450,
+      "proposal_rejections": []
+    },
+    {
+      "task": "mini-slug-003",
+      "condition": "native",
+      "runs_in_group": 3,
+      "status": "error",
+      "original_response": {
+        "code": "proposal_response_not_found",
+        "response_chars": 0,
+        "fields": [],
+        "valid_json_object": false
+      },
+      "proposal_completion_tokens": 450,
+      "per_call_completion_ceiling": 450,
+      "proposal_rejections": []
+    },
+    {
+      "task": "mini-slug-003",
+      "condition": "oracle",
+      "runs_in_group": 3,
+      "status": "error",
+      "original_response": {
+        "code": "proposal_response_not_found",
+        "response_chars": 0,
+        "fields": [],
+        "valid_json_object": false
+      },
+      "proposal_completion_tokens": 450,
+      "per_call_completion_ceiling": 450,
+      "proposal_rejections": []
+    },
+    {
+      "task": "mini-slug-003",
+      "condition": "placebo",
+      "runs_in_group": 3,
+      "status": "error",
+      "original_response": {
+        "code": "proposal_response_not_found",
+        "response_chars": 0,
+        "fields": [],
+        "valid_json_object": false
+      },
+      "proposal_completion_tokens": 450,
+      "per_call_completion_ceiling": 450,
+      "proposal_rejections": []
+    }
+  ]
+}

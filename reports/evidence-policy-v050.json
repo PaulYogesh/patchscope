@@ -1,0 +1,132 @@
+{
+  "n_tasks": 4,
+  "n_pairs": 4,
+  "n_matching_exploration": 1,
+  "results": [
+    {
+      "task_id": "mini-average-001",
+      "repetition": 0,
+      "exploration_log_match": false,
+      "outcomes": {
+        "baseline": "repair_failed_tests",
+        "inventory": "repair_failed_tests",
+        "imports": "repair_failed_tests"
+      },
+      "verified": {
+        "baseline": false,
+        "inventory": false,
+        "imports": false
+      },
+      "patch_paths": {
+        "baseline": "average_utils.py",
+        "inventory": "average_utils.py",
+        "imports": "average_utils.py"
+      },
+      "tokens": {
+        "baseline": 3275,
+        "inventory": 2673,
+        "imports": 2771
+      },
+      "map_chars": {
+        "baseline": 0,
+        "inventory": 458,
+        "imports": 498
+      },
+      "map_edges": 0
+    },
+    {
+      "task_id": "mini-clamp-002",
+      "repetition": 0,
+      "exploration_log_match": false,
+      "outcomes": {
+        "baseline": "repair_failed_tests",
+        "inventory": "repair_failed_tests",
+        "imports": "repair_failed_tests"
+      },
+      "verified": {
+        "baseline": false,
+        "inventory": false,
+        "imports": false
+      },
+      "patch_paths": {
+        "baseline": "bounds_compat.py",
+        "inventory": "bounds_compat.py",
+        "imports": "bounds_compat.py"
+      },
+      "tokens": {
+        "baseline": 3541,
+        "inventory": 2795,
+        "imports": 2955
+      },
+      "map_chars": {
+        "baseline": 0,
+        "inventory": 452,
+        "imports": 492
+      },
+      "map_edges": 0
+    },
+    {
+      "task_id": "mini-discount-004",
+      "repetition": 0,
+      "exploration_log_match": true,
+      "outcomes": {
+        "baseline": "resolved",
+        "inventory": "resolved",
+        "imports": "resolved"
+      },
+      "verified": {
+        "baseline": true,
+        "inventory": true,
+        "imports": true
+      },
+      "patch_paths": {
+        "baseline": "checkout.py",
+        "inventory": "checkout.py",
+        "imports": "checkout.py"
+      },
+      "tokens": {
+        "baseline": 2448,
+        "inventory": 2637,
+        "imports": 2651
+      },
+      "map_chars": {
+        "baseline": 0,
+        "inventory": 453,
+        "imports": 493
+      },
+      "map_edges": 0
+    },
+    {
+      "task_id": "mini-slug-003",
+      "repetition": 0,
+      "exploration_log_match": false,
+      "outcomes": {
+        "baseline": "repair_failed_tests",
+        "inventory": "repair_failed_tests",
+        "imports": "error"
+      },
+      "verified": {
+        "baseline": false,
+        "inventory": false,
+        "imports": false
+      },
+      "patch_paths": {
+        "baseline": "slugify.py",
+        "inventory": "slugify.py",
+        "imports": null
+      },
+      "tokens": {
+        "baseline": 3978,
+        "inventory": 4636,
+        "imports": 5471
+      },
+      "map_chars": {
+        "baseline": 0,
+        "inventory": 450,
+        "imports": 490
+      },
+      "map_edges": 0
+    }
+  ],
+  "warning": "A matched exploration log is not proof of identical hidden state; inventory and imports prompts are not token-length matched. Only task-level descriptive comparisons are warranted."
+}

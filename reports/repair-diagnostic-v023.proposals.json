@@ -1,0 +1,53 @@
+{
+  "total_runs": 2,
+  "outcome_counts": {
+    "error": 1,
+    "resolved": 1
+  },
+  "groups": [
+    {
+      "task": "mini-clamp-002",
+      "condition": "oracle",
+      "runs_in_group": 1,
+      "status": "resolved",
+      "original_response": {
+        "valid_json_object": true,
+        "code": "structure_valid",
+        "fields": [
+          "new",
+          "old",
+          "path"
+        ],
+        "unexpected_field_count": 0,
+        "response_chars": 115
+      },
+      "proposal_completion_tokens": 316,
+      "per_call_completion_ceiling": 450,
+      "finish_reason": "stop",
+      "at_completion_ceiling": false,
+      "attempt_count": 1,
+      "proposal_rejections": []
+    },
+    {
+      "task": "mini-slug-003",
+      "condition": "native",
+      "runs_in_group": 1,
+      "status": "error",
+      "original_response": {
+        "valid_json_object": false,
+        "code": "patch_json_invalid_or_missing",
+        "fields": [],
+        "response_chars": 0
+      },
+      "proposal_completion_tokens": 450,
+      "per_call_completion_ceiling": 450,
+      "finish_reason": "length",
+      "at_completion_ceiling": true,
+      "attempt_count": 2,
+      "proposal_rejections": [
+        "patch_json_invalid_or_missing",
+        "patch_json_invalid_or_missing"
+      ]
+    }
+  ]
+}

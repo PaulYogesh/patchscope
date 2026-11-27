@@ -1,0 +1,112 @@
+{
+  "comparison": "decoy_presence_vs_absence__native",
+  "clean_experiment": "decoy-free-native-v031",
+  "decoy_experiment": "interference-smoke-v030",
+  "n_tasks": 4,
+  "n_pairs": 4,
+  "fixture_parity": [
+    {
+      "task_id": "mini-average-001",
+      "decoy_path": "average_utils.py",
+      "shared_files_sha256": "ca90f830bbf0fd3b80c466cf8a6af2ec4fb10ccbbac3b939cb9cc1f3ef99c53a",
+      "shared_file_count": 6
+    },
+    {
+      "task_id": "mini-clamp-002",
+      "decoy_path": "bounds_compat.py",
+      "shared_files_sha256": "8c2a0a354cef371f47ab18c49ec9dd64811099b13afdc6890a44e412a78cd571",
+      "shared_file_count": 6
+    },
+    {
+      "task_id": "mini-discount-004",
+      "decoy_path": "pricing_compat.py",
+      "shared_files_sha256": "c7d48b0b4e6cc19e34dbf029d4922e6b45b4c2349f8561c52030f3fa1e7f527f",
+      "shared_file_count": 6
+    },
+    {
+      "task_id": "mini-slug-003",
+      "decoy_path": "slugify.py",
+      "shared_files_sha256": "20512c1d5304c14f01fed27b9e512645e522854d12ba3605fa7a4af8858a8c83",
+      "shared_file_count": 6
+    }
+  ],
+  "summary": {
+    "clean_verified": 4,
+    "decoy_verified": 1,
+    "lost_with_decoy": 3,
+    "gained_with_decoy": 0,
+    "decoy_wrong_locus_patches": 3,
+    "identical_recorded_trajectories": 0,
+    "median_extra_tokens": 461.0
+  },
+  "pairs": [
+    {
+      "task_id": "mini-average-001",
+      "repetition": 0,
+      "clean_status": "resolved",
+      "decoy_status": "repair_failed_tests",
+      "clean_verified": true,
+      "decoy_verified": false,
+      "clean_first_read": "billing.py",
+      "decoy_first_read": "average_utils.py",
+      "clean_patch_path": "calculator.py",
+      "decoy_patch_path": "average_utils.py",
+      "decoy_wrong_locus_patch": true,
+      "identical_recorded_trajectory": false,
+      "clean_tokens": 2887,
+      "decoy_tokens": 3275,
+      "decoy_minus_clean_tokens": 388
+    },
+    {
+      "task_id": "mini-clamp-002",
+      "repetition": 0,
+      "clean_status": "resolved",
+      "decoy_status": "repair_failed_tests",
+      "clean_verified": true,
+      "decoy_verified": false,
+      "clean_first_read": "limits.py",
+      "decoy_first_read": "bounds_compat.py",
+      "clean_patch_path": "limits.py",
+      "decoy_patch_path": "bounds_compat.py",
+      "decoy_wrong_locus_patch": true,
+      "identical_recorded_trajectory": false,
+      "clean_tokens": 2604,
+      "decoy_tokens": 3541,
+      "decoy_minus_clean_tokens": 937
+    },
+    {
+      "task_id": "mini-discount-004",
+      "repetition": 0,
+      "clean_status": "resolved",
+      "decoy_status": "resolved",
+      "clean_verified": true,
+      "decoy_verified": true,
+      "clean_first_read": "checkout.py",
+      "decoy_first_read": "checkout.py",
+      "clean_patch_path": "checkout.py",
+      "decoy_patch_path": "checkout.py",
+      "decoy_wrong_locus_patch": false,
+      "identical_recorded_trajectory": false,
+      "clean_tokens": 2955,
+      "decoy_tokens": 2448,
+      "decoy_minus_clean_tokens": -507
+    },
+    {
+      "task_id": "mini-slug-003",
+      "repetition": 0,
+      "clean_status": "resolved",
+      "decoy_status": "repair_failed_tests",
+      "clean_verified": true,
+      "decoy_verified": false,
+      "clean_first_read": "capitalize.py",
+      "decoy_first_read": "slugify.py",
+      "clean_patch_path": "text_ops.py",
+      "decoy_patch_path": "slugify.py",
+      "decoy_wrong_locus_patch": true,
+      "identical_recorded_trajectory": false,
+      "clean_tokens": 3444,
+      "decoy_tokens": 3978,
+      "decoy_minus_clean_tokens": 534
+    }
+  ]
+}

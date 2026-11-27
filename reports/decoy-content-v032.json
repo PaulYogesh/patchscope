@@ -1,0 +1,197 @@
+{
+  "comparison": "native_clean_vs_same_name_neutral_vs_task_relevant_decoy",
+  "experiments": {
+    "clean": "decoy-free-native-v031",
+    "neutral": "same-name-neutral-native-v032",
+    "decoy": "interference-smoke-v030"
+  },
+  "n_distinct_tasks": 4,
+  "n_matched_episodes": 4,
+  "fixture_parity": [
+    {
+      "task_id": "mini-average-001",
+      "extra_path": "average_utils.py",
+      "neutral_bytes": 197,
+      "decoy_bytes": 197,
+      "neutral_minus_decoy_bytes": 0,
+      "neutral_sha256": "773800f88df4641c5d6ba7a0addea307ddaa1e5a070ebddd145992443eaa81e9",
+      "decoy_sha256": "01624c18faaed0dfd176667ba803f7ed5e3ff8caf6f298dbb0b77ef339fa5c61"
+    },
+    {
+      "task_id": "mini-clamp-002",
+      "extra_path": "bounds_compat.py",
+      "neutral_bytes": 210,
+      "decoy_bytes": 210,
+      "neutral_minus_decoy_bytes": 0,
+      "neutral_sha256": "52662260deec2f6ff412e1cd8e31de1157393942f904fb2bd6be788a7edeafed",
+      "decoy_sha256": "fff8ef5af88938776f82af1c1c05dca0b97c58ae87a1696b44e58d785f591e74"
+    },
+    {
+      "task_id": "mini-discount-004",
+      "extra_path": "pricing_compat.py",
+      "neutral_bytes": 261,
+      "decoy_bytes": 259,
+      "neutral_minus_decoy_bytes": 2,
+      "neutral_sha256": "e29b72091ed40187c4267d890f8a98fe49bb5e34ad6e1ff75d4ff22955432968",
+      "decoy_sha256": "cb5d16cd4fa5a64378ddd704864076aef0fee357213b327537570ddcfcda7967"
+    },
+    {
+      "task_id": "mini-slug-003",
+      "extra_path": "slugify.py",
+      "neutral_bytes": 123,
+      "decoy_bytes": 120,
+      "neutral_minus_decoy_bytes": 3,
+      "neutral_sha256": "cdccee7f18d84732e7a62374638b68d2b3ee21afcc2de9de1cc1c2aeba829328",
+      "decoy_sha256": "9bff2e15fb073033e439eadd6f0082e0a92bc1138ff35022aae15c3d86336307"
+    }
+  ],
+  "summary": {
+    "clean_verified": 4,
+    "neutral_verified": 4,
+    "decoy_verified": 1,
+    "lost_neutral_to_decoy": 3,
+    "gained_neutral_to_decoy": 0,
+    "neutral_extra_path_edits": 0,
+    "decoy_extra_path_edits": 3,
+    "median_neutral_minus_clean_tokens": 918.5,
+    "median_decoy_minus_neutral_tokens": -256.0
+  },
+  "pairs": [
+    {
+      "task_id": "mini-average-001",
+      "repetition": 0,
+      "clean": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "billing.py",
+        "patch_path": "calculator.py",
+        "extra_path_patch": false,
+        "total_tokens": 2887,
+        "trajectory_signature": "eb3f58c320eecdaad91c3a1edd2a32e0a13557b5bf0d68212c1eff1467e464aa"
+      },
+      "neutral": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "average_utils.py",
+        "patch_path": "calculator.py",
+        "extra_path_patch": false,
+        "total_tokens": 3775,
+        "trajectory_signature": "1881d545ede192049f557f3dd5a718f58e74b21b67d2f7db9258d42d329a5df5"
+      },
+      "decoy": {
+        "status": "repair_failed_tests",
+        "verified": false,
+        "first_read_path": "average_utils.py",
+        "patch_path": "average_utils.py",
+        "extra_path_patch": true,
+        "total_tokens": 3275,
+        "trajectory_signature": "048d27d48ec3dfeb537b37c9f59f848ea34e45c747cab70cc81ec62e1591887d"
+      },
+      "neutral_minus_clean_tokens": 888,
+      "decoy_minus_neutral_tokens": -500,
+      "neutral_to_decoy_loss": true
+    },
+    {
+      "task_id": "mini-clamp-002",
+      "repetition": 0,
+      "clean": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "limits.py",
+        "patch_path": "limits.py",
+        "extra_path_patch": false,
+        "total_tokens": 2604,
+        "trajectory_signature": "661641939ded3d4e1a2a51db06f6c833c1cc9a9b39ad7d9c315a7282b7aaac1e"
+      },
+      "neutral": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "bounds_compat.py",
+        "patch_path": "limits.py",
+        "extra_path_patch": false,
+        "total_tokens": 3553,
+        "trajectory_signature": "b22507553428a6e34afa6a9739041a2e29f70e39d376ca25c67fa5d43b92fbec"
+      },
+      "decoy": {
+        "status": "repair_failed_tests",
+        "verified": false,
+        "first_read_path": "bounds_compat.py",
+        "patch_path": "bounds_compat.py",
+        "extra_path_patch": true,
+        "total_tokens": 3541,
+        "trajectory_signature": "f82759b3d454d62e6052e65334141073cd5292385dca0bcf595b5e8ff68207c6"
+      },
+      "neutral_minus_clean_tokens": 949,
+      "decoy_minus_neutral_tokens": -12,
+      "neutral_to_decoy_loss": true
+    },
+    {
+      "task_id": "mini-discount-004",
+      "repetition": 0,
+      "clean": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "checkout.py",
+        "patch_path": "checkout.py",
+        "extra_path_patch": false,
+        "total_tokens": 2955,
+        "trajectory_signature": "54c372cab21a93dffb954f6094b8745e6ab03b8a5500a0978aafb3a99a09d01a"
+      },
+      "neutral": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "checkout.py",
+        "patch_path": "checkout.py",
+        "extra_path_patch": false,
+        "total_tokens": 2405,
+        "trajectory_signature": "ba52e844b8ba4a0c2c582da3a98ed35314b4b0f538259b743aeb0648f33470ee"
+      },
+      "decoy": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "checkout.py",
+        "patch_path": "checkout.py",
+        "extra_path_patch": false,
+        "total_tokens": 2448,
+        "trajectory_signature": "ba52e844b8ba4a0c2c582da3a98ed35314b4b0f538259b743aeb0648f33470ee"
+      },
+      "neutral_minus_clean_tokens": -550,
+      "decoy_minus_neutral_tokens": 43,
+      "neutral_to_decoy_loss": false
+    },
+    {
+      "task_id": "mini-slug-003",
+      "repetition": 0,
+      "clean": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "capitalize.py",
+        "patch_path": "text_ops.py",
+        "extra_path_patch": false,
+        "total_tokens": 3444,
+        "trajectory_signature": "629ec44e8ccf8d44aecbe8e68bb9ca02aa5299d075f53f6fbbe5b4f404b4dfdf"
+      },
+      "neutral": {
+        "status": "resolved",
+        "verified": true,
+        "first_read_path": "slugify.py",
+        "patch_path": "text_ops.py",
+        "extra_path_patch": false,
+        "total_tokens": 5488,
+        "trajectory_signature": "2f88699f592d8461c9235fd70bb208aac86fb8cc90e6f50fc3d988b256777925"
+      },
+      "decoy": {
+        "status": "repair_failed_tests",
+        "verified": false,
+        "first_read_path": "slugify.py",
+        "patch_path": "slugify.py",
+        "extra_path_patch": true,
+        "total_tokens": 3978,
+        "trajectory_signature": "4dd6149825e0e15c6e13bdba3444e138f5d61ec26cc48c79eb775aee08f85933"
+      },
+      "neutral_minus_clean_tokens": 2044,
+      "decoy_minus_neutral_tokens": -1510,
+      "neutral_to_decoy_loss": true
+    }
+  ]
+}

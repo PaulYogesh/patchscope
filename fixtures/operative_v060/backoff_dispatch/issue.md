@@ -1,0 +1,1 @@
+The public `service.retry_delay` route uses a capped exponential backoff but returns a linear delay. With attempt 4, base 3 and maximum 20, we expect 20 seconds but currently get 12. Attempt numbering starts at 1. Please change the operative implementation, not an unrelated compatibility implementation.

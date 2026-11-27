@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "experiment_id": "evidence-benchmark-inventory-v050",
+  "description": "Proposal-only inventory intervention on eight already inspected expansion tasks; regression, not new held-out evidence.",
+  "conditions": [
+    "native",
+    "bm25",
+    "placebo",
+    "oracle",
+    "misleading"
+  ],
+  "repetitions": 1,
+  "randomization_seed": 20261023,
+  "model_seed_base": 42000,
+  "model": {
+    "primary": "qwen3.5:9b",
+    "temperature": 0,
+    "require_native_tools": true
+  },
+  "budgets": {
+    "max_steps": 6,
+    "max_tool_calls": 8,
+    "max_model_calls": 10,
+    "max_completion_tokens_per_call": 450,
+    "soft_total_token_budget": 8000,
+    "seed_char_budget": 1600,
+    "max_patch_retries": 1,
+    "max_patch_completion_tokens_per_call": 1400,
+    "source_map_char_budget": 1400
+  },
+  "retrieval": {
+    "top_k": 1
+  },
+  "tasks": [
+    {
+      "task_id": "tiered-billing-005",
+      "repo_path": "fixtures/benchmark_v040/decoy/tiered-billing-005",
+      "issue_path": "fixtures/benchmark_v040/decoy/tiered-billing-005/issue.md",
+      "trusted_execution": true,
+      "verification": {
+        "kind": "pytest",
+        "timeout_seconds": 30
+      },
+      "oracle": {
+        "paths": [
+          "tax_math.py"
+        ]
+      },
+      "placebo_pool": [
+        "formatting.py",
+        "constants.py"
+      ],
+      "misleading_pool": [
+        "tax_compat.py"
+      ]
+    },
+    {
+      "task_id": "backoff-ceiling-006",
+      "repo_path": "fixtures/benchmark_v040/decoy/backoff-ceiling-006",
+      "issue_path": "fixtures/benchmark_v040/decoy/backoff-ceiling-006/issue.md",
+      "trusted_execution": true,
+      "verification": {
+        "kind": "pytest",
+        "timeout_seconds": 30
+      },
+      "oracle": {
+        "paths": [
+          "backoff.py"
+        ]
+      },
+      "placebo_pool": [
+        "formatting.py",
+        "constants.py"
+      ],
+      "misleading_pool": [
+        "retry_compat.py"
+      ]
+    },
+    {
+      "task_id": "stock-exact-007",
+      "repo_path": "fixtures/benchmark_v040/decoy/stock-exact-007",
+      "issue_path": "fixtures/benchmark_v040/decoy/stock-exact-007/issue.md",
+      "trusted_execution": true,
+      "verification": {
+        "kind": "pytest",
+        "timeout_seconds": 30
+      },
+      "oracle": {
+        "paths": [
+          "allocation.py"
+        ]
+      },
+      "placebo_pool": [
+        "formatting.py",
+        "constants.py"
+      ],
+      "misleading_pool": [
+        "stock_compat.py"
+      ]
+    },
+    {
+      "task_id": "one-index-pages-008",
+      "repo_path": "fixtures/benchmark_v040/decoy/one-index-pages-008",
+      "issue_path": "fixtures/benchmark_v040/decoy/one-index-pages-008/issue.md",
+      "trusted_execution": true,
+      "verification": {
+        "kind": "pytest",
+        "timeout_seconds": 30
+      },
+      "oracle": {
+        "paths": [
+          "pagination.py"
+        ]
+      },
+      "placebo_pool": [
+        "formatting.py",
+        "constants.py"
+      ],
+      "misleading_pool": [
+        "pagination_compat.py"
+      ]
+    },
+    {
+      "task_id": "owner-access-009",
+      "repo_path": "fixtures/benchmark_v040/decoy/owner-access-009",
+      "issue_path": "fixtures/benchmark_v040/decoy/owner-access-009/issue.md",
+      "trusted_execution": true,
+      "verification": {
+        "kind": "pytest",
+        "timeout_seconds": 30
+      },
+      "oracle": {
+        "paths": [
+          "policy.py"
+        ]
+      },
+      "placebo_pool": [
+        "formatting.py",
+        "constants.py"
+      ],
+      "misleading_pool": [
+        "policy_compat.py"
+      ]
+    },
+    {
+      "task_id": "sensor-offset-010",
+      "repo_path": "fixtures/benchmark_v040/decoy/sensor-offset-010",
+      "issue_path": "fixtures/benchmark_v040/decoy/sensor-offset-010/issue.md",
+      "trusted_execution": true,
+      "verification": {
+        "kind": "pytest",
+        "timeout_seconds": 30
+      },
+      "oracle": {
+        "paths": [
+          "calibration.py"
+        ]
+      },
+      "placebo_pool": [
+        "formatting.py",
+        "constants.py"
+      ],
+      "misleading_pool": [
+        "calibration_compat.py"
+      ]
+    },
+    {
+      "task_id": "window-inclusive-011",
+      "repo_path": "fixtures/benchmark_v040/decoy/window-inclusive-011",
+      "issue_path": "fixtures/benchmark_v040/decoy/window-inclusive-011/issue.md",
+      "trusted_execution": true,
+      "verification": {
+        "kind": "pytest",
+        "timeout_seconds": 30
+      },
+      "oracle": {
+        "paths": [
+          "intervals.py"
+        ]
+      },
+      "placebo_pool": [
+        "formatting.py",
+        "constants.py"
+      ],
+      "misleading_pool": [
+        "window_compat.py"
+      ]
+    },
+    {
+      "task_id": "f1-harmonic-012",
+      "repo_path": "fixtures/benchmark_v040/decoy/f1-harmonic-012",
+      "issue_path": "fixtures/benchmark_v040/decoy/f1-harmonic-012/issue.md",
+      "trusted_execution": true,
+      "verification": {
+        "kind": "pytest",
+        "timeout_seconds": 30
+      },
+      "oracle": {
+        "paths": [
+          "scores.py"
+        ]
+      },
+      "placebo_pool": [
+        "formatting.py",
+        "constants.py"
+      ],
+      "misleading_pool": [
+        "scores_compat.py"
+      ]
+    }
+  ],
+  "evidence_policy": "inventory"
+}
