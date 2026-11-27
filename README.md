@@ -94,6 +94,12 @@ installed. The paired report preserves the official grade alongside that evidenc
 
 [Read the case study](docs/cases/pydicom-811.md) · [Inspect the paired report](docs/cases/pydicom-811-paired-report.md)
 
+## Diagnose archived runs
+
+Use the [batch diagnostics report](docs/archive-diagnostics.md) to compare saved edits,
+graded patches, and reference runs across a fixed set of cases. The report keeps the
+official grade alongside the evidence, check timings, and suggested next action.
+
 ## How it works
 
 The model explores a pinned repository through bounded, read-only tools. A separate proposal call requests one structured edit. PatchScope validates the edit against source the model actually saw, computes a hash of the original line range, runs static checks, and exports an applicable diff. In the SWE-bench development workflow, the official evaluator grades that diff separately.
