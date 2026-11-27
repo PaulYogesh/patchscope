@@ -37,6 +37,11 @@ and `report.json`. The command reports a grade when the archived patch matches
 and the report records successful application for that task. It runs no grader
 or model.
 
+For an episode that includes an `expected_replay` object, pass
+`--verify-expected` to check the original and corrected patch hashes, Git's
+original rejection, the corrected tree, and the number of new model calls.
+A mismatch exits with an error before writing a corrected patch.
+
 ## What happened on SQLFluff #2419
 
 The agent saved a line-range edit to `src/sqlfluff/rules/L060.py`. The legacy
@@ -50,6 +55,8 @@ run. That run was **resolved**. The replay used zero new model calls.
 | Original diff | Legacy renderer reproduced the archived bytes. Git reported a corrupt patch at line 14. |
 | Corrected diff | Applied to base `f1dba0e1dd764ae72d67c3d5e1471cf14d3db030` and produced the intended tree `4d22474d275d09a33afcf71223974e105001b78f`. |
 | Archived grade | Corrected patch matched the grader input. The official report recorded the issue as resolved. |
+
+[Reproduce the SQLFluff replay](docs/cases/sqlfluff-2419.md)
 
 ## Compare proposal contracts
 

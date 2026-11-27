@@ -1,0 +1,28 @@
+{
+  "task_id": "sqlfluff__sqlfluff-2419",
+  "provenance": {
+    "base_commit": "f1dba0e1dd764ae72d67c3d5e1471cf14d3db030",
+    "repository": "https://github.com/sqlfluff/sqlfluff.git"
+  },
+  "proposal": {
+    "path": "src/sqlfluff/rules/L060.py",
+    "start_line": 40,
+    "end_line": 62,
+    "expected_sha256": "5574332eb1880c097023b885a40c365b444f2bdbbe03e9fd5f5b410f2405eff3",
+    "replacement": "    def _eval(self, context: RuleContext) -> Optional[LintResult]:\n        \"\"\"Use ``COALESCE`` instead of ``IFNULL`` or ``NVL``.\"\"\"\n        # We only care about function names.\n        if context.segment.name != \"function_name_identifier\":\n            return None\n\n        # Only care if the function is ``IFNULL`` or ``NVL``.\n        if context.segment.raw_upper not in {\"IFNULL\", \"NVL\"}:\n            return None\n\n        # Create fix to replace ``IFNULL`` or ``NVL`` with ``COALESCE``.\n        fix = LintFix.replace(\n            context.segment,\n            [\n                CodeSegment(\n                    raw=\"COALESCE\",\n                    name=\"function_name_identifier\",\n                    type=\"function_name_identifier\",\n                )\n            ],\n        )\n\n        # Create a specific error message based on the detected function.\n        if context.segment.raw_upper == \"IFNULL\":\n            desc = \"Use 'COALESCE' instead of 'IFNULL'.\"\n        else:\n            desc = \"Use 'COALESCE' instead of 'NVL'.\"\n\n        return LintResult(context.segment, [fix], description=desc)"
+  },
+  "proposal_diff": "--- a/src/sqlfluff/rules/L060.py\n+++ b/src/sqlfluff/rules/L060.py\n@@ -59,4 +59,10 @@\n             ],\n         )\n \n-        return LintResult(context.segment, [fix])\n+        # Create a specific error message based on the detected function.\n+        if context.segment.raw_upper == \"IFNULL\":\n+            desc = \"Use 'COALESCE' instead of 'IFNULL'.\"\n+        else:\n+            desc = \"Use 'COALESCE' instead of 'NVL'.\"\n+\n+        return LintResult(context.segment, [fix], description=desc)",
+  "expected_replay": {
+    "original_patch_sha256": "c00076dc93814cf66e1d635692d6cce0a8621c375ed03eb5419b6d6387474d54",
+    "original_git_rejection_contains": "corrupt patch",
+    "legacy_renderer_reproduces_original_bytes": true,
+    "corrected_patch_sha256": "330a2119df33565a876e814270fcbdabbf7376ab2f2a5e2940f6843388cdf807",
+    "corrected_tree": "4d22474d275d09a33afcf71223974e105001b78f",
+    "new_model_calls": 0
+  },
+  "archived_grader_result": {
+    "patch_sha256": "330a2119df33565a876e814270fcbdabbf7376ab2f2a5e2940f6843388cdf807",
+    "patch_successfully_applied": true,
+    "official_resolved": true
+  }
+}
